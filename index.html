@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Sitio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Tu Sitio</div>
+    <ul class="nav-tabs">
+      <li><button class="active" onclick="switchTab('articulos', this)">Artículos</button></li>
+      <li><button onclick="switchTab('finanzas', this)">Finanzas</button></li>
+      <li><button onclick="switchTab('blog', this)">Blog</button></li>
+    </ul>
+    <button class="menu-toggle" onclick="toggleMenu()" aria-label="Menú">&#9776;</button>
+  </nav>
+
+  <!-- ARTÍCULOS -->
+  <div id="tab-articulos" class="content active">
+    <div class="hero">
+      <div class="hero-label">Artículos</div>
+      <h1>Ideas que vale la pena leer</h1>
+      <p>Análisis, perspectivas y contenido de fondo sobre los temas que importan.</p>
+    </div>
+    <div class="inner">
+      <div class="section-title">Recientes</div>
+      <div class="section-sub">Últimas publicaciones</div>
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-tag">Tecnología</div>
+          <h3>El futuro de los mercados digitales</h3>
+          <p>Una exploración profunda de cómo las plataformas están redefiniendo el capital.</p>
+        </div>
+        <div class="card">
+          <div class="card-tag">Geopolítica</div>
+          <h3>Poder y capital en Asia</h3>
+          <p>Cómo los flujos de inversión globales están cambiando el orden mundial.</p>
+        </div>
+        <div class="card">
+          <div class="card-tag">Análisis</div>
+          <h3>Infraestructura como ventaja</h3>
+          <p>Por qué las empresas que controlan los rieles ganan a largo plazo.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FINANZAS -->
+  <div id="tab-finanzas" class="content">
+    <div class="hero">
+      <div class="hero-label">Finanzas</div>
+      <h1>Perspectiva de largo plazo</h1>
+      <p>Mercados, portafolios y el pensamiento detrás de las decisiones de inversión.</p>
+    </div>
+    <div class="inner">
+      <div class="section-title">Panorama</div>
+      <div class="section-sub">Métricas e indicadores clave</div>
+      <div class="metric-row">
+        <div class="metric">
+          <div class="metric-label">S&amp;P 500</div>
+          <div class="metric-val">5,280</div>
+        </div>
+        <div class="metric">
+          <div class="metric-label">Rendimiento YTD</div>
+          <div class="metric-val">+8.4%</div>
+        </div>
+        <div class="metric">
+          <div class="metric-label">Posiciones</div>
+          <div class="metric-val">14</div>
+        </div>
+        <div class="metric">
+          <div class="metric-label">Horizonte</div>
+          <div class="metric-val">10 yr</div>
+        </div>
+      </div>
+      <div class="card-grid" style="margin-top: 1.5rem">
+        <div class="card">
+          <div class="card-tag">Análisis</div>
+          <h3>LatAm Fintech 2026</h3>
+          <p>MELI y NU: el caso para mantener en volatilidad.</p>
+        </div>
+        <div class="card">
+          <div class="card-tag">China</div>
+          <h3>BABA y el ciclo regulatorio</h3>
+          <p>Valuación atractiva con riesgo geopolítico acotado.</p>
+        </div>
+        <div class="card">
+          <div class="card-tag">Macro</div>
+          <h3>Tasas y rotación sectorial</h3>
+          <p>Cómo posicionar el portafolio en entornos de tasa alta.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOG -->
+  <div id="tab-blog" class="content">
+    <div class="hero">
+      <div class="hero-label">Blog</div>
+      <h1>Notas del camino</h1>
+      <p>Reflexiones personales, aprendizajes y conversaciones que valen la pena.</p>
+    </div>
+    <div class="inner">
+      <div class="section-title">Entradas</div>
+      <div class="section-sub">Lo más reciente</div>
+      <div class="blog-list">
+        <div class="blog-item">
+          <div>
+            <h4>Por qué el largo plazo siempre gana</h4>
+            <span>Mayo 2026 · 5 min lectura</span>
+          </div>
+          <div class="blog-arrow">→</div>
+        </div>
+        <div class="blog-item">
+          <div>
+            <h4>Lo que aprendí perdiendo dinero en mercados</h4>
+            <span>Abril 2026 · 7 min lectura</span>
+          </div>
+          <div class="blog-arrow">→</div>
+        </div>
+        <div class="blog-item">
+          <div>
+            <h4>Geopolítica para inversionistas no profesionales</h4>
+            <span>Febrero 2026 · 6 min lectura</span>
+          </div>
+          <div class="blog-arrow">→</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
