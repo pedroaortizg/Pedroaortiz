@@ -1,6 +1,13 @@
 // ── Índice de posts ──────────────────────────────────────────────
 const POSTS = [
   {
+    file: "posts/La-lucidez.md",
+    title: "Autopercepción de lucidez",
+    date: "Junio 2026", readTime: "7 min", category: "Blog",
+    section: "blog",
+    excerpt: "El sesgo de la metacognición"
+  },
+  {
     file: "posts/largo-plazo.md",
     title: "Por qué el largo plazo siempre gana",
     date: "Mayo 2026", readTime: "5 min", category: "Inversión",
@@ -10,7 +17,7 @@ const POSTS = [
   {
     file: "posts/meli-tesis.md",
     title: "MercadoLibre: tesis para 2026",
-    date: "Abril 2026", readTime: "7 min", category: "LatAm",
+    date: "Abril 2026", readTime: "7 min", category: "Inversión",
     section: "finanzas",
     excerpt: "Por qué MELI sigue siendo mi posición más relevante en LatAm a pesar de la volatilidad."
   },
