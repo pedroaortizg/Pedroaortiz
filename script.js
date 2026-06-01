@@ -14,21 +14,23 @@ const POSTS = [
     section: "finanzas",
     excerpt: "Por qué MELI sigue siendo mi posición más relevante en LatAm a pesar de la volatilidad."
   },
+
+  
+   {
+    file: "posts/clase-media-india-china_1.md",
+    title: "La clase media: el motor de crecimiento",
+    date: "Junio 2026", readTime: "12 min", category: "Macroeconomía",
+    section: "articulos",
+    excerpt: "¿Por qué es importante el desarrollo de las clases medias? Ejemplo India y China"
+  },
   {
     file: "posts/poder-capital-asia.md",
     title: "Poder y capital en Asia",
     date: "Marzo 2026", readTime: "6 min", category: "Geopolítica",
     section: "articulos",
     excerpt: "Cómo los flujos de inversión globales están cambiando el orden mundial."
-  },
-
-   {
-    file: "clase-media-india-china_1.md",
-    title: "La clase media: el motor de crecimiento",
-    date: "Junio 2026", readTime: "12 min", category: "Macroeconomía",
-    section: "articulos",
-    excerpt: "¿Por qué es importante el desarrollo de las clases medias? Ejemplo India y China"
   }
+
 ];
 
 // ── Estado ───────────────────────────────────────────────────────
