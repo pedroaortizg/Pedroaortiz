@@ -1,6 +1,22 @@
 // ── Índice de posts ──────────────────────────────────────────────
 // slug = lo que aparece en la URL: pedroaortiz.com/slug
 const POSTS = [
+   {
+    slug: "clase-media-india-china",
+    file: "posts/clase-media-india-china.md",
+    title: "La clase media como motor económico: China, India y el nuevo orden global",
+    date: "Junio 2026", readTime: "12 min", category: "Macro",
+    section: "articulos",
+    excerpt: "China construyó la clase media más grande del mundo. India la está construyendo ahora. ¿Cuál tiene el modelo correcto para las próximas décadas?"
+  },
+   {
+    slug: "economia-de-la-soledad",
+    file: "posts/economia-de-la-soledad.md",
+    title: " El negocio de la desconexión: el tecnofeudalismo y  la economía de la soledad",
+    date: "Junio 2026", readTime: "10 min", category: "Economía",
+    section: "articulos",
+    excerpt: "¿A quién le conviene que estés solo?"
+  },
   {
     slug: "largo-plazo",
     file: "posts/largo-plazo.md",
@@ -24,22 +40,6 @@ const POSTS = [
     date: "Marzo 2026", readTime: "6 min", category: "Geopolítica",
     section: "articulos",
     excerpt: "Cómo los flujos de inversión globales están cambiando el orden mundial."
-  },
-  {
-    slug: "clase-media-india-china",
-    file: "posts/clase-media-india-china.md",
-    title: "La clase media como motor económico: China, India y el nuevo orden global",
-    date: "Junio 2026", readTime: "12 min", category: "Macro",
-    section: "articulos",
-    excerpt: "China construyó la clase media más grande del mundo. India la está construyendo ahora. ¿Cuál tiene el modelo correcto para las próximas décadas?"
-  },
-  {
-    slug: "economia-de-la-soledad",
-    file: "posts/economia-de-la-soledad.md",
-    title: "La economía de la soledad: tecnofeudalismo y el negocio de la desconexión",
-    date: "Junio 2026", readTime: "10 min", category: "Economía",
-    section: "articulos",
-    excerpt: "¿A quién le conviene que estés solo? El tecnofeudalismo como sistema que encontró en la desconexión su mejor aliado."
   }
 ];
 
