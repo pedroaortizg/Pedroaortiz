@@ -12,7 +12,7 @@ const POSTS = [
    {
     slug: "economia-de-la-soledad",
     file: "posts/economia-de-la-soledad.md",
-    title: " El negocio de la desconexión: el tecnofeudalismo y  la economía de la soledad",
+    title: " El negocio de la desconexión: el tecnofeudalismo y la economía de la soledad",
     date: "Junio 2026", readTime: "9 min", category: "Economía",
     section: "articulos",
     excerpt: "¿A quién le conviene que estés solo?"
