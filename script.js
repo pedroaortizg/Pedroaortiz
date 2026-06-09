@@ -1,13 +1,8 @@
 // ── Índice de posts ──────────────────────────────────────────────
+// slug = lo que aparece en la URL: pedroaortiz.com/slug
 const POSTS = [
   {
-    file: "posts/La-lucidez.md",
-    title: "Autopercepción de lucidez",
-    date: "Junio 2026", readTime: "7 min", category: "Blog",
-    section: "blog",
-    excerpt: "El sesgo de la metacognición"
-  },
-  {
+    slug: "largo-plazo",
     file: "posts/largo-plazo.md",
     title: "Por qué el largo plazo siempre gana",
     date: "Mayo 2026", readTime: "5 min", category: "Inversión",
@@ -15,35 +10,58 @@ const POSTS = [
     excerpt: "La mayoría de los inversionistas pierden contra el mercado por una sola razón."
   },
   {
+    slug: "meli-tesis",
     file: "posts/meli-tesis.md",
     title: "MercadoLibre: tesis para 2026",
-    date: "Abril 2026", readTime: "7 min", category: "Inversión",
+    date: "Abril 2026", readTime: "7 min", category: "LatAm",
     section: "finanzas",
     excerpt: "Por qué MELI sigue siendo mi posición más relevante en LatAm a pesar de la volatilidad."
   },
-
-  
-   {
-    file: "posts/clase-media-india-china_1.md",
-    title: "La clase media: el motor de crecimiento",
-    date: "Junio 2026", readTime: "12 min", category: "Macroeconomía",
-    section: "articulos",
-    excerpt: "¿Por qué es importante el desarrollo de las clases medias? Ejemplo India y China"
-  },
   {
+    slug: "poder-capital-asia",
     file: "posts/poder-capital-asia.md",
     title: "Poder y capital en Asia",
     date: "Marzo 2026", readTime: "6 min", category: "Geopolítica",
     section: "articulos",
     excerpt: "Cómo los flujos de inversión globales están cambiando el orden mundial."
+  },
+  {
+    slug: "clase-media-india-china",
+    file: "posts/clase-media-india-china.md",
+    title: "La clase media como motor económico: China, India y el nuevo orden global",
+    date: "Junio 2026", readTime: "12 min", category: "Macro",
+    section: "articulos",
+    excerpt: "China construyó la clase media más grande del mundo. India la está construyendo ahora. ¿Cuál tiene el modelo correcto para las próximas décadas?"
+  },
+  {
+    slug: "economia-de-la-soledad",
+    file: "posts/economia-de-la-soledad.md",
+    title: "La economía de la soledad: tecnofeudalismo y el negocio de la desconexión",
+    date: "Junio 2026", readTime: "10 min", category: "Economía",
+    section: "articulos",
+    excerpt: "¿A quién le conviene que estés solo? El tecnofeudalismo como sistema que encontró en la desconexión su mejor aliado."
   }
-
 ];
 
 // ── Estado ───────────────────────────────────────────────────────
 let currentTab = 'articulos';
 let previousTab = 'articulos';
 let treemapRendered = false;
+
+// ── Routing ──────────────────────────────────────────────────────
+function getSlugFromPath() {
+  const path = window.location.pathname.replace(/^\//, "").replace(/\/$/, "");
+  return path || null;
+}
+
+function navigateTo(slug) {
+  window.history.pushState({ slug }, "", "/" + slug);
+}
+
+function navigateToTab(tab) {
+  const path = tab === "articulos" ? "/" : "/" + tab;
+  window.history.pushState({ tab }, "", path);
+}
 
 // ── Treemap ──────────────────────────────────────────────────────
 function getColor(rend, type) {
@@ -59,7 +77,7 @@ function getColor(rend, type) {
 async function renderTreemap() {
   if (treemapRendered) return;
   try {
-    const res = await fetch("portfolio.json");
+    const res = await fetch("/portfolio.json");
     if (!res.ok) throw new Error("No encontrado");
     const portfolio = await res.json();
     const data = portfolio.positions;
@@ -67,7 +85,6 @@ async function renderTreemap() {
     const container = document.getElementById("treemap-container");
     const W = container.getBoundingClientRect().width || 660;
     const H = Math.round(W * 0.62);
-
     const tooltip = document.getElementById("tooltip");
 
     const root = d3.hierarchy({children: data}).sum(d => d.pct);
@@ -173,7 +190,7 @@ function renderSection(section) {
       <div class="section-sub">${posts.length} publicación${posts.length !== 1 ? "es" : ""}</div>
       <div class="card-grid">
         ${posts.map(p => `
-          <div class="card" onclick="openPost('${p.file}')">
+          <div class="card" onclick="openPost('${p.slug}')">
             <div class="card-tag">${p.category}</div>
             <h3>${p.title}</h3>
             <p>${p.excerpt}</p>
@@ -188,7 +205,7 @@ function renderSection(section) {
       <div class="section-sub">${posts.length} publicación${posts.length !== 1 ? "es" : ""}</div>
       <div class="blog-list">
         ${posts.map(p => `
-          <div class="blog-item" onclick="openPost('${p.file}')">
+          <div class="blog-item" onclick="openPost('${p.slug}')">
             <div><h4>${p.title}</h4><span>${p.date} · ${p.readTime} lectura</span></div>
             <div class="blog-arrow">→</div>
           </div>`).join("")}
@@ -197,35 +214,42 @@ function renderSection(section) {
 }
 
 // ── Abrir post ───────────────────────────────────────────────────
-async function openPost(file) {
+async function openPost(slug) {
+  const post = POSTS.find(p => p.slug === slug);
+  if (!post) return;
   previousTab = currentTab;
   try {
-    const res = await fetch(file);
+    const res = await fetch("/" + post.file);
     if (!res.ok) throw new Error("No encontrado");
     const md = await res.text();
     document.getElementById("post-body").innerHTML = marked.parse(md);
-    switchTab("post", null);
+    navigateTo(slug);
+    switchTab("post", null, false);
     window.scrollTo(0, 0);
   } catch(e) {
     document.getElementById("post-body").innerHTML =
-      `<h1>Post no encontrado</h1><p>El archivo <code>${file}</code> no existe todavía.</p>`;
-    switchTab("post", null);
+      `<h1>Post no encontrado</h1><p>El archivo no existe todavía.</p>`;
+    navigateTo(slug);
+    switchTab("post", null, false);
   }
 }
 
 // ── Volver ───────────────────────────────────────────────────────
 function goBack() {
   const idx = previousTab === "articulos" ? 0 : previousTab === "finanzas" ? 1 : 2;
-  switchTab(previousTab, document.querySelectorAll(".nav-tabs button")[idx]);
+  switchTab(previousTab, document.querySelectorAll(".nav-tabs button")[idx], true);
 }
 
 // ── Cambiar tab ──────────────────────────────────────────────────
-function switchTab(tab, btn) {
+function switchTab(tab, btn, updateUrl = true) {
   document.querySelectorAll(".content").forEach(el => el.classList.remove("active"));
   document.querySelectorAll(".nav-tabs button").forEach(b => b.classList.remove("active"));
   document.getElementById("tab-" + tab).classList.add("active");
   if (btn) btn.classList.add("active");
-  if (tab !== "post") currentTab = tab;
+  if (tab !== "post") {
+    currentTab = tab;
+    if (updateUrl) navigateToTab(tab);
+  }
   if (tab === "finanzas") renderTreemap();
   document.querySelector(".nav-tabs").classList.remove("open");
   window.scrollTo(0, 0);
@@ -236,7 +260,34 @@ function toggleMenu() {
   document.querySelector(".nav-tabs").classList.toggle("open");
 }
 
+// ── Manejar botón atrás del navegador ────────────────────────────
+window.addEventListener("popstate", () => handleRoute());
+
+// ── Leer URL al cargar ───────────────────────────────────────────
+function handleRoute() {
+  const slug = getSlugFromPath();
+
+  // Es un post
+  const post = POSTS.find(p => p.slug === slug);
+  if (post) { openPost(slug); return; }
+
+  // Es una pestaña
+  if (slug === "finanzas") {
+    switchTab("finanzas", document.querySelectorAll(".nav-tabs button")[1], false);
+    return;
+  }
+  if (slug === "blog") {
+    switchTab("blog", document.querySelectorAll(".nav-tabs button")[2], false);
+    return;
+  }
+
+  // Default: artículos
+  switchTab("articulos", document.querySelectorAll(".nav-tabs button")[0], false);
+}
+
 // ── Init ─────────────────────────────────────────────────────────
 renderSection("articulos");
 renderSection("finanzas");
 renderSection("blog");
+handleRoute();
+
