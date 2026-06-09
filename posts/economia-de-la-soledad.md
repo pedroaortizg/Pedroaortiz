@@ -18,21 +18,17 @@ Eso es, en esencia, lo que Varoufakis llama tecnofeudalismo: la idea de que la e
 
 La diferencia con el capitalismo tradicional es simple: antes el sistema ganaba dinero produciendo cosas. Ahora lo gana controlando el lugar donde otros producen.
 
-
 Sin embargo, hay algo que hace este modelo todavía más peculiar. Las plataformas de redes sociales no cobran renta en dinero, cobran en algo más valioso y que no sabías que lo era: tu atención y tus datos. Cada vez que subes un video, escribes un post, subes fotos o simplemente navegas, estás generando contenido y datos. No eres el cliente. Eres la materia prima. Y  el plot twist es que el producto que fabricas: tu comportamiento, tus preferencias, tus inseguridades, es exactamente lo que monetizan y cada interacción solo hace esa máquina aún más perfecta.
 
 O sea que, el sistema construyó un territorio donde la gente trabaja gratis para producir lo que el sistema vende. Y lo hizo tan conveniente, tan entretenido y tan socialmente necesario que nadie lo siente como trabajo.
 
----
-
-## 
-
 La soledad creció de forma consistente en sociedades occidentales durante las últimas dos décadas, coincidiendo con la masificación de las plataformas digitales. Correlación no es causalidad, pero la coincidencia abrió una línea de investigación que produjo resultados específicos.
+
+## Lo feo:
 
 El caso más documentado es el de Meta. En 2021, Frances Haugen filtró miles de documentos internos que mostraban que Instagram sabía que amplificaba ansiedad e inseguridad en usuarios jóvenes, especialmente mujeres adolescentes y eligió no actuar porque las métricas de engagement no justificaban el cambio. La plataforma era más rentable con usuarios ansiosos que con usuarios satisfechos.
 
 El mecanismo es simple: la aplicación no está diseñada para darte lo que buscas, a su vez, está diseñada para mantenerte buscando. Un usuario satisfecho cierra la pantalla, en cambio, un usuario que casi encuentra lo que necesita sigue navegando. Las plataformas no venden conexión, venden la sensación de estar a punto de conectar. Precisamente, esa diferencia lo es todo, porque la conexión real sacia. Las plataformas y lo que ofrecen, por diseño, nunca lo hacen.
----
 
 ## La conexión como competencia
 
@@ -45,7 +41,6 @@ El tecnofeudalismo no creó la soledad. La soledad tiene causas más antiguas co
 Lo que sí se puede argumentar con evidencia es que el sistema encontró en la soledad existente una oportunidad de negocio que al explotarla, la profundizó y que cuando tuvo evidencia de que sus productos dañaban a sus usuarios, eligió no corregirlo porque el daño era funcional al modelo.
 
 Quizás esa sea la conexión más certera e incómoda entre el tecnofeudalismo y la soledad. No hay villano en esta historia. Solo un sistema que descubrió que la soledad era rentable y supo aprovecharla.
----
 
 Pedro A. Ortiz
 
