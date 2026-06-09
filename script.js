@@ -7,13 +7,13 @@ const POSTS = [
     title: "La clase media como motor económico: China, India y el nuevo orden global",
     date: "Junio 2026", readTime: "12 min", category: "Macro",
     section: "articulos",
-    excerpt: "China construyó la clase media más grande del mundo. India la está construyendo ahora. ¿Cuál tiene el modelo correcto para las próximas décadas?"
+    excerpt: "China construyó la clase media más grande del mundo. India la está construyendo ahora."
   },
    {
     slug: "economia-de-la-soledad",
     file: "posts/economia-de-la-soledad.md",
     title: " El negocio de la desconexión: el tecnofeudalismo y  la economía de la soledad",
-    date: "Junio 2026", readTime: "10 min", category: "Economía",
+    date: "Junio 2026", readTime: "9 min", category: "Economía",
     section: "articulos",
     excerpt: "¿A quién le conviene que estés solo?"
   },
@@ -29,7 +29,7 @@ const POSTS = [
     slug: "meli-tesis",
     file: "posts/meli-tesis.md",
     title: "MercadoLibre: tesis para 2026",
-    date: "Abril 2026", readTime: "7 min", category: "LatAm",
+    date: "Abril 2026", readTime: "7 min", category: "Inversión",
     section: "finanzas",
     excerpt: "Por qué MELI sigue siendo mi posición más relevante en LatAm a pesar de la volatilidad."
   },
