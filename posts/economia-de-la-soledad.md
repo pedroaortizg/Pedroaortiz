@@ -44,4 +44,4 @@ Quizás esa sea la conexión más certera e incómoda entre el tecnofeudalismo y
 
 Pedro A. Ortiz
 
-*Referencias: Yanis Varoufakis, Technofeudalism: What Killed Capitalism (2023). Documentos internos de Meta filtrados por Frances Haugen (2021). Betty Orozco, plática en el trabajo (2026)*
+*Referencias: Yanis Varoufakis, Technofeudalism: What Killed Capitalism (2023). Documentos internos de Meta filtrados por Frances Haugen (2021). Betty Orozco, plática en el trabajo (2026). Romina Corral, aporte de video de referencia (2026)*
