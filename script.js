@@ -1,13 +1,13 @@
 // ── Índice de posts ──────────────────────────────────────────────
 // slug = lo que aparece en la URL: pedroaortiz.com/slug
 const POSTS = [
-   {
-    slug: "clase-media-india-china",
-    file: "posts/clase-media-india-china.md",
-    title: "La clase media como motor económico: China, India y el nuevo orden global",
-    date: "Junio 2026", readTime: "12 min", category: "Macro",
+ {
+    slug: "cada-vez-mas-somos-menos-duenos_1",
+    file: "posts/cada-vez-mas-somos-menos-duenos_1.md",
+    title: "Cada vez MÁS somo MENOS dueños",
+    date: "Junio 2026", readTime: "7 min", category: "Economía",
     section: "articulos",
-    excerpt: "China construyó la clase media más grande del mundo. India la está construyendo ahora."
+    excerpt: "Sobre la ilusión de sentirnos propietarios"
   },
    {
     slug: "economia-de-la-soledad",
@@ -16,6 +16,14 @@ const POSTS = [
     date: "Junio 2026", readTime: "9 min", category: "Economía",
     section: "articulos",
     excerpt: "¿A quién le conviene que estés solo?"
+  },
+   {
+    slug: "clase-media-india-china",
+    file: "posts/clase-media-india-china.md",
+    title: "La clase media como motor económico: China, India y el nuevo orden global",
+    date: "Junio 2026", readTime: "12 min", category: "Macro",
+    section: "articulos",
+    excerpt: "China construyó la clase media más grande del mundo. India la está construyendo ahora."
   },
   {
     slug: "largo-plazo",
