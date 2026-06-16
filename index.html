@@ -10,9 +10,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+  <!-- KaTeX para renderizar fórmulas matemáticas -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
 </head>
 <body>
-
   <nav>
     <div class="logo">Pedro A. Ortiz</div>
     <ul class="nav-tabs" id="navTabs">
@@ -22,7 +25,6 @@
     </ul>
     <button class="menu-toggle" onclick="toggleMenu()" aria-label="Menú">&#9776;</button>
   </nav>
-
   <!-- ARTÍCULOS -->
   <div id="tab-articulos" class="content active">
     <div class="hero">
@@ -34,7 +36,6 @@
       <div class="section-title">Cargando artículos...</div>
     </div>
   </div>
-
   <!-- FINANZAS -->
   <div id="tab-finanzas" class="content">
     <div class="hero">
@@ -59,7 +60,6 @@
     </div>
     <div class="inner" id="finanzas-list"></div>
   </div>
-
   <!-- BLOG -->
   <div id="tab-blog" class="content">
     <div class="hero">
@@ -71,7 +71,6 @@
       <div class="section-title">Cargando entradas...</div>
     </div>
   </div>
-
   <!-- VISTA DE POST -->
   <div id="tab-post" class="content">
     <div class="post-back">
@@ -79,9 +78,7 @@
     </div>
     <div class="post-body" id="post-body"></div>
   </div>
-
   <div id="tooltip" class="portfolio-tooltip"></div>
-
   <script src="script.js"></script>
 </body>
 </html>
