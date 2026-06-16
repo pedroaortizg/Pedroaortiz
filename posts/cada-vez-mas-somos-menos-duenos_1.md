@@ -12,7 +12,7 @@ Recuerdas la última vez que compraste algo y realmente fue tuyo para siempre? H
 
 Lo podemos ver en lo más cotidiano. La música ya no son CD, vinilos, es acceso a un catálogo que puede modificarse o desaparecer si los términos y condiciones cambian. Las películas, el coche con los nuevos tipos de financiamiento. Y la más notoria: la vivienda que para una generación entera dejó de ser una meta alcanzable. En mi opinión, cada vez lo veremos más, alguien nos rentará sillones, microondas, celulares, etc.
 
-Ahora hagamos la segunda derivada $$\frac{d^2f}{dx^2}$$:
+Ahora hagamos la segunda derivada: $$\frac{d^2f}{dx^2}$$
 Lo interesante va más allá de los objetos. Son las cosas que siempre fueron tuyas sin que nadie te las vendiera porque nadie las controlaba.
 
 **Tus datos.** Antes tu información era tuya por default, ´por naturaleza. Hoy la entregas a cambio de servicios que se sienten gratuitos pero no lo son. Cada búsqueda, cada click, cada ruta que recorres con el teléfono en el bolsillo produce un perfil que alguien posee, administra y vende. No firmaste una renta explícita. Pero cediste algo de valor potencialmente mayor.
