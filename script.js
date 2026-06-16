@@ -4,7 +4,7 @@ const POSTS = [
  {
     slug: "cada-vez-mas-somos-menos-duenos_1",
     file: "posts/cada-vez-mas-somos-menos-duenos_1.md",
-    title: "Cada vez MÁS somo MENOS dueños",
+    title: "Cada vez MÁS somos MENOS dueños",
     date: "Junio 2026", readTime: "7 min", category: "Economía",
     section: "articulos",
     excerpt: "Sobre la ilusión de sentirnos propietarios"
