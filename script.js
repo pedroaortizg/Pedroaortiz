@@ -50,7 +50,6 @@ const POSTS = [
     excerpt: "Cómo los flujos de inversión globales están cambiando el orden mundial."
   }
 ];
-
 // ── Estado ───────────────────────────────────────────────────────
 let currentTab = 'articulos';
 let previousTab = 'articulos';
@@ -231,6 +230,13 @@ async function openPost(slug) {
     if (!res.ok) throw new Error("No encontrado");
     const md = await res.text();
     document.getElementById("post-body").innerHTML = marked.parse(md);
+    renderMathInElement(document.getElementById("post-body"), {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false}
+      ],
+      throwOnError: false
+    });
     navigateTo(slug);
     switchTab("post", null, false);
     window.scrollTo(0, 0);
@@ -298,4 +304,3 @@ renderSection("articulos");
 renderSection("finanzas");
 renderSection("blog");
 handleRoute();
-
