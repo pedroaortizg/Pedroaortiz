@@ -1,23 +1,174 @@
 {
-  "updated": "2026-05-30",
-  "tc_usdmxn": 17.35,
-  "positions": [
-    {"ticker": "GBMALFA", "pct": 14.41, "rend": 1.34,   "type": "MX"},
-    {"ticker": "META",    "pct": 11.08, "rend": -0.59,  "type": "USA"},
-    {"ticker": "NU",      "pct": 10.96, "rend": -10.23, "type": "USA"},
-    {"ticker": "MU",      "pct": 9.60,  "rend": 46.11,  "type": "USA"},
-    {"ticker": "MELI",    "pct": 9.12,  "rend": -7.70,  "type": "USA"},
-    {"ticker": "NFLX",    "pct": 6.78,  "rend": -13.04, "type": "USA"},
-    {"ticker": "AMZN",    "pct": 6.58,  "rend": 25.26,  "type": "USA"},
-    {"ticker": "MSFT",    "pct": 5.05,  "rend": 10.44,  "type": "USA"},
-    {"ticker": "Efectivo","pct": 12.67, "rend": 0,      "type": "EFEC"},
-    {"ticker": "V",       "pct": 4.19,  "rend": 1.96,   "type": "USA"},
-    {"ticker": "NIO",     "pct": 4.07,  "rend": -7.63,  "type": "USA"},
-    {"ticker": "NVO",     "pct": 3.89,  "rend": 7.06,   "type": "USA"},
-    {"ticker": "MA",      "pct": 3.52,  "rend": -5.94,  "type": "USA"},
-    {"ticker": "BABA",    "pct": 3.14,  "rend": -23.35, "type": "USA"},
-    {"ticker": "GMEXICO", "pct": 3.06,  "rend": 9.45,   "type": "MX"},
-    {"ticker": "PINFRA",  "pct": 2.64,  "rend": 6.31,   "type": "MX"},
-    {"ticker": "RA",      "pct": 1.92,  "rend": -1.93,  "type": "MX"}
+  "updated": "15 junio 2026",
+  "invertido_pct": 79.1,
+  "efectivo_pct": 20.9,
+  "num_posiciones": 15,
+  "groups": [
+    {
+      "section": "Tech & AI — Core",
+      "positions": [
+        {
+          "ticker": "META", "name": "Meta Platforms", "color": "indigo",
+          "pnl": -4, "cartera": 10.4, "conviction": 5,
+          "tesis": "Infraestructura de distribución digital. 3.4B usuarios, ads con AI multiplicando 3.5x clicks. Suscripciones recién lanzadas como 2° motor. Tu mayor posición y mayor convicción.",
+          "metrics": [{"t":"PER Fwd 22x","c":"green"},{"t":"Margen 43%","c":"indigo"},{"t":"Top Conviction","c":"gold"}]
+        },
+        {
+          "ticker": "AMZN", "name": "Amazon", "color": "gold",
+          "pnl": 10, "cartera": 7.6, "conviction": 4,
+          "tesis": "AWS backlog $244B creciendo 24%. Chip Trainium triple dígito reduciendo dependencia de NVDA. Advertising alto margen. Tu mejor performer — entraste en el bear y rebotó fuerte.",
+          "metrics": [{"t":"PER Fwd 29x","c":"gold"},{"t":"AWS +24%","c":"green"},{"t":"Mejor PnL","c":"green"}]
+        },
+        {
+          "ticker": "MSFT", "name": "Microsoft", "color": "green",
+          "pnl": -2, "cartera": 5.2, "conviction": 4,
+          "tesis": "Azure +40% con backlog $625B. Copilot en 15M de 450M posibles. Distribución empresarial irremplazable. Forward PE en mínimo de 3 años. Entrada reciente — sin moverse mucho aún.",
+          "metrics": [{"t":"PER Fwd 29x","c":"gold"},{"t":"Azure +40%","c":"green"},{"t":"Backlog $625B","c":"indigo"}]
+        },
+        {
+          "ticker": "NFLX", "name": "Netflix", "color": "red",
+          "pnl": -20, "cartera": 5.3, "conviction": 3,
+          "tesis": "Disciplina financiera ejemplar. Margen neto 43%, FCF $2.66B/trim. Ad tier 250M MAUs. Pricing power probado. Decidiste promediar a la baja — negocio sólido a múltiplo razonable.",
+          "metrics": [{"t":"PER 16x trail","c":"green"},{"t":"Margen 43%","c":"green"},{"t":"Peor PnL −20%","c":"red"}]
+        }
+      ]
+    },
+    {
+      "section": "LatAm Fintech",
+      "positions": [
+        {
+          "ticker": "MELI", "name": "MercadoLibre", "color": "olive",
+          "pnl": -9, "cartera": 7.6, "conviction": 5,
+          "tesis": "Amazon de LatAm + Fintech early-stage. Revenue +49% YoY, el más rápido en 4 años. Brasil acelerando. Tarjeta crédito +104%. Márgenes comprimidos por inversión deliberada.",
+          "metrics": [{"t":"PER 43x","c":"gold"},{"t":"Revenue +49%","c":"green"},{"t":"Top Conviction","c":"gold"}]
+        },
+        {
+          "ticker": "NU", "name": "Nu Holdings", "color": "green",
+          "pnl": -13, "cartera": 9.0, "conviction": 4,
+          "tesis": "135M clientes, ARPAC $16. Efficiency ratio 17.6% — mejor de su historia. México en breakeven. Charter EE.UU. con Livingston ex-Visa. Presión de provisiones por crecimiento del libro.",
+          "metrics": [{"t":"PER 23x","c":"gold"},{"t":"ARPAC $16","c":"green"},{"t":"MX breakeven","c":"green"}]
+        }
+      ]
+    },
+    {
+      "section": "Salud & Valor",
+      "positions": [
+        {
+          "ticker": "NVO", "name": "Novo Nordisk", "color": "gold",
+          "pnl": 2, "cartera": 3.2, "conviction": 3,
+          "tesis": "Perdió narrativa de liderazgo GLP-1 pero mantiene ROIC ~40%. Valuación deprimida por miedo de mercado más que por deterioro real del negocio. Posición de valor dentro del portafolio.",
+          "metrics": [{"t":"PER 12.9x","c":"green"},{"t":"ROIC 40%","c":"green"}]
+        }
+      ]
+    },
+    {
+      "section": "Pagos Globales — Defensivo",
+      "positions": [
+        {
+          "ticker": "V", "name": "Visa", "color": "indigo",
+          "pnl": 4, "cartera": 3.6, "conviction": 3,
+          "tesis": "Toll road del comercio global. 8,400M tarjetas, 175M puntos de aceptación. Revenue +14.6%. Sin riesgo de crédito. Moat de red irremplazable. Posición defensiva en positivo.",
+          "metrics": [{"t":"PER 25x","c":"gold"},{"t":"Rev +14.6%","c":"green"},{"t":"Defensivo","c":"indigo"}]
+        },
+        {
+          "ticker": "MA", "name": "Mastercard", "color": "terra",
+          "pnl": -5, "cartera": 3.0, "conviction": 3,
+          "tesis": "Crece más rápido que Visa, margen operativo 60.8%. Revenue +15.8%, cuarto beat consecutivo. Adquirió BVNK para stablecoins. Expansión internacional en emergentes.",
+          "metrics": [{"t":"PER 30x","c":"red"},{"t":"Margen 60.8%","c":"green"},{"t":"Defensivo","c":"indigo"}]
+        }
+      ]
+    },
+    {
+      "section": "China — Especulativo Controlado",
+      "positions": [
+        {
+          "ticker": "BABA", "name": "Alibaba", "color": "red",
+          "pnl": -32, "cartera": 2.4, "conviction": 2,
+          "tesis": "Cloud AI +38%, 11 trimestres triple dígito en AI. $75.5B caja. Qwen como modelo serio. Guerra en 2 frentes comprime márgenes. Tu peor PnL — riesgo China en pleno efecto.",
+          "metrics": [{"t":"PER 12x","c":"green"},{"t":"Cloud +38%","c":"green"},{"t":"Peor PnL −32%","c":"red"}]
+        },
+        {
+          "ticker": "NIO", "name": "NIO Inc.", "color": "olive",
+          "pnl": -17, "cartera": 3.1, "conviction": 3,
+          "tesis": "Tesis de infraestructura: 4,000 estaciones swap = VPP distribuida. 100M swaps. Revenue +98%. Primera ganancia operativa. Swap network ya rentable. Energía como negocio alterno.",
+          "metrics": [{"t":"GAAP neg","c":"red"},{"t":"Rev +98%","c":"green"},{"t":"Especulativo","c":"red"}]
+        }
+      ]
+    },
+    {
+      "section": "México — Ancla Diversificadora",
+      "positions": [
+        {
+          "ticker": "GBMALFA", "name": "GBM Alfa — Fondo MX", "color": "green",
+          "pnl": 1, "cartera": 12.3, "conviction": 4,
+          "tesis": "Tu mayor posición y mejor diversificador. Sin correlación con ciclo AI americano. Nearshoring, consumo MX, infraestructura local. El ancla que sostiene el portafolio en correcciones.",
+          "metrics": [{"t":"Diversificador","c":"green"},{"t":"Sin correlación AI","c":"indigo"}]
+        },
+        {
+          "ticker": "GMEXICO B", "name": "Grupo México", "color": "gold",
+          "pnl": 9, "cartera": 2.6, "conviction": 3,
+          "tesis": "Cobre como metal del futuro — EV, AI infra, electrificación. Minero de clase mundial con transporte propio. Beneficiario del nearshoring. Sólido PnL positivo.",
+          "metrics": [{"t":"Commodities","c":"indigo"},{"t":"Cobre + Nearshoring","c":"green"}]
+        },
+        {
+          "ticker": "PINFRA", "name": "Promotora y Operadora", "color": "indigo",
+          "pnl": 8, "cartera": 2.3, "conviction": 3,
+          "tesis": "Autopistas en México con concesiones de largo plazo. Revenue predecible, pricing indexado a inflación. Beneficiario del comercio terrestre por nearshoring. PnL positivo sólido.",
+          "metrics": [{"t":"Infraestructura","c":"indigo"},{"t":"Rev predecible","c":"green"}]
+        },
+        {
+          "ticker": "RA", "name": "Regional (Banco)", "color": "terra",
+          "pnl": -5, "cartera": 1.6, "conviction": 2,
+          "tesis": "Banco regional con foco en PyMEs del norte. Beneficiario del nearshoring industrial en Monterrey y Bajío. Crecimiento de cartera superior al promedio bancario nacional.",
+          "metrics": [{"t":"Banca MX","c":"indigo"},{"t":"Nearshoring","c":"green"}]
+        }
+      ]
+    }
+  ],
+  "cash": {
+    "pct": 20.9,
+    "tesis": "Reserva estratégica. Pendiente TSMC ($438) y GOOGL ($363) post-firma del acuerdo Irán (19 jun) y FOMC (17 jun). Pólvora para earnings de julio.",
+    "metrics": [{"t":"Pólvora táctica","c":""},{"t":"TSMC + GOOGL pendientes","c":"gold"}]
+  },
+  "pnl_table": [
+    {"ticker":"AMZN","pnl":10,"cartera":7.6,"sig":"cheap"},
+    {"ticker":"GMEXICO B","pnl":9,"cartera":2.6,"sig":"cheap"},
+    {"ticker":"PINFRA","pnl":8,"cartera":2.3,"sig":"cheap"},
+    {"ticker":"V","pnl":4,"cartera":3.6,"sig":"cheap"},
+    {"ticker":"NVO","pnl":2,"cartera":3.2,"sig":"cheap"},
+    {"ticker":"GBMALFA","pnl":1,"cartera":12.3,"sig":"cheap"},
+    {"ticker":"MSFT","pnl":-2,"cartera":5.2,"sig":"mid"},
+    {"ticker":"META","pnl":-4,"cartera":10.4,"sig":"mid"},
+    {"ticker":"MA","pnl":-5,"cartera":3.0,"sig":"mid"},
+    {"ticker":"RA","pnl":-5,"cartera":1.6,"sig":"mid"},
+    {"ticker":"MELI","pnl":-9,"cartera":7.6,"sig":"mid"},
+    {"ticker":"NU","pnl":-13,"cartera":9.0,"sig":"rich"},
+    {"ticker":"NIO","pnl":-17,"cartera":3.1,"sig":"rich"},
+    {"ticker":"NFLX","pnl":-20,"cartera":5.3,"sig":"rich"},
+    {"ticker":"BABA","pnl":-32,"cartera":2.4,"sig":"rich"}
+  ],
+   "valuacion_table": [
+    {"ticker":"BABA","per":"~12x","crec":"+11% LFL","sig":"Barato","sigColor":"green"},
+    {"ticker":"NVO","per":"12.9x","crec":"+32% CC","sig":"Barato","sigColor":"green"},
+    {"ticker":"NFLX","per":"~16x","crec":"+16%","sig":"Atractivo","sigColor":"green"},
+    {"ticker":"META","per":"~22x","crec":"+33%","sig":"Atractivo","sigColor":"green"},
+    {"ticker":"NU","per":"~23x","crec":"+50% CC","sig":"Atractivo","sigColor":"green"},
+    {"ticker":"TSMC*","per":"~23x","crec":"+40%","sig":"Atractivo","sigColor":"green"},
+    {"ticker":"V","per":"~25x","crec":"+14.6%","sig":"Razonable","sigColor":"gold"},
+    {"ticker":"GOOGL*","per":"~28x","crec":"+22%","sig":"Razonable","sigColor":"gold"},
+    {"ticker":"AMZN","per":"~29x","crec":"+10%","sig":"Razonable","sigColor":"gold"},
+    {"ticker":"MSFT","per":"~29x","crec":"+13%","sig":"Razonable","sigColor":"gold"},
+    {"ticker":"MA","per":"~30x","crec":"+15.8%","sig":"Justo","sigColor":"gold"},
+    {"ticker":"MELI","per":"~43x","crec":"+49%","sig":"Premium","sigColor":"gold"},
+    {"ticker":"NIO","per":"N/A","crec":"+98%","sig":"GAAP neg","sigColor":"red"}
+  ],
+   "sectores": [
+    {"name":"Tech & AI Americano","pct":28.5,"color":"indigo","detail":"META · AMZN · MSFT · NFLX"},
+    {"name":"LatAm Fintech","pct":16.6,"color":"olive","detail":"MELI · NU"},
+    {"name":"México","pct":18.8,"color":"green","detail":"GBMALFA · GMEXICO · PINFRA · RA"},
+    {"name":"Pagos Globales","pct":6.6,"color":"indigo","detail":"V · MA"},
+    {"name":"China","pct":5.5,"color":"red","detail":"BABA · NIO"},
+    {"name":"Salud / Valor","pct":3.2,"color":"gold","detail":"NVO"},
+    {"name":"Efectivo","pct":20.9,"color":"muted","detail":"Pendiente TSMC + GOOGL"}
   ]
 }
