@@ -28,9 +28,9 @@ const POSTS = [
   {
     slug: "largo-plazo",
     file: "posts/largo-plazo.md",
-    title: "La ventaja estadística",
+    title: "El largo plazo no siempre es bueno...",
     date: "Mayo 2026", readTime: "7 min", category: "Finanzas",
-    section: "blog",
+    section: "finanzas",
     excerpt: "¿Por que invertir no es lo mismo que apostar?."
   },
   {
@@ -48,6 +48,14 @@ const POSTS = [
     date: "Marzo 2026", readTime: "6 min", category: "Geopolítica",
     section: "articulos",
     excerpt: "Cómo los flujos de inversión globales están cambiando el orden mundial."
+  },
+  {
+    slug: "la-lucidez",
+    file: "posts/La-lucidez.md",
+    title: "La paradoja de la lucidez",
+    date: "Mayo 2026", readTime: "7 min", category: "Blog",
+    section: "blog",
+    excerpt: "La autopercepción y su inevitable sesgo."
   }
 ];
 // ── Estado ───────────────────────────────────────────────────────
