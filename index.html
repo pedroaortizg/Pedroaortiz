@@ -43,21 +43,42 @@
       <h1>Perspectiva de largo plazo</h1>
       <p>Mercados, portafolios y el pensamiento detrás de las decisiones de inversión.</p>
     </div>
-    <div class="inner">
-      <div class="section-title">Mi portafolio</div>
-      <div class="section-sub">Tamaño = peso en portafolio &nbsp;·&nbsp; Color = rendimiento acumulado</div>
-      <div class="treemap-legend">
-        <span class="leg-item"><span class="leg-dot" style="background:#c0392b;"></span>−15%+</span>
-        <span class="leg-item"><span class="leg-dot" style="background:#a03535;"></span>−5%</span>
-        <span class="leg-item"><span class="leg-dot" style="background:#7a4a4a;"></span>−5% a 0%</span>
-        <span class="leg-item"><span class="leg-dot" style="background:#3d6b5e;"></span>0% a +5%</span>
-        <span class="leg-item"><span class="leg-dot" style="background:#2d7d6b;"></span>+5% a +20%</span>
-        <span class="leg-item"><span class="leg-dot" style="background:#1a9e6e;"></span>+20%+</span>
-        <span class="leg-item"><span class="leg-dot" style="background:#1a3a5c;"></span>Efectivo</span>
+
+    <div class="pf-dash">
+      <div class="pf-header">
+        <h1>Mi Portafolio</h1>
+        <div class="pf-header-sub" id="pf-updated">Al cierre · —</div>
+        <div class="pf-header-stats">
+          <div class="pf-hstat">
+            <div class="pf-hstat-label">Invertido</div>
+            <div class="pf-hstat-value" id="pf-invertido" style="color:var(--pf-cream)">—</div>
+          </div>
+          <div class="pf-hstat">
+            <div class="pf-hstat-label">Efectivo</div>
+            <div class="pf-hstat-value" id="pf-efectivo" style="color:var(--pf-gold)">—</div>
+          </div>
+          <div class="pf-hstat">
+            <div class="pf-hstat-label">Posiciones</div>
+            <div class="pf-hstat-value" id="pf-num-posiciones" style="color:var(--pf-indigo)">—</div>
+          </div>
+        </div>
       </div>
-      <div id="treemap-container"></div>
-      <div id="treemap-updated" class="treemap-updated"></div>
+
+      <div class="pf-tabs">
+        <div class="pf-tab active" onclick="showPfTab('posiciones')">Posiciones</div>
+        <div class="pf-tab" onclick="showPfTab('pnl')">P&amp;L</div>
+        <div class="pf-tab" onclick="showPfTab('valuacion')">Valuación</div>
+        <div class="pf-tab" onclick="showPfTab('sectores')">Sectores</div>
+      </div>
+
+      <div class="pf-content">
+        <div id="pf-tab-posiciones" class="pf-tab-content"></div>
+        <div id="pf-tab-pnl" class="pf-tab-content pf-hidden"></div>
+        <div id="pf-tab-valuacion" class="pf-tab-content pf-hidden"></div>
+        <div id="pf-tab-sectores" class="pf-tab-content pf-hidden"></div>
+      </div>
     </div>
+
     <div class="inner" id="finanzas-list"></div>
   </div>
   <!-- BLOG -->
