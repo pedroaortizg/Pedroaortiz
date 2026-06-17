@@ -28,10 +28,10 @@ const POSTS = [
   {
     slug: "largo-plazo",
     file: "posts/largo-plazo.md",
-    title: "Por qué el largo plazo siempre gana",
-    date: "Mayo 2026", readTime: "5 min", category: "Inversión",
+    title: "La ventaja estadística",
+    date: "Mayo 2026", readTime: "7 min", category: "Finanzas",
     section: "blog",
-    excerpt: "La mayoría de los inversionistas pierden contra el mercado por una sola razón."
+    excerpt: "¿Por que invertir no es lo mismo que apostar?."
   },
   {
     slug: "meli-tesis",
