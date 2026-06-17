@@ -453,3 +453,107 @@ nav {
   min-width: 160px;
   line-height: 1.7;
 }
+
+/* ══════════════════════════════════════════════════════════════
+   PORTFOLIO DASHBOARD (prefijo pf- para evitar colisiones)
+   ══════════════════════════════════════════════════════════════ */
+.pf-dash {
+  --pf-bg: transparent;
+  --pf-surface: rgba(33,102,109,0.08);
+  --pf-card: rgba(33,102,109,0.12);
+  --pf-card-hover: rgba(33,102,109,0.18);
+  --pf-border: rgba(33,102,109,0.25);
+  --pf-border-solid: rgba(33,102,109,0.35);
+  --pf-text: #e8dcc8;
+  --pf-muted: rgba(232,220,200,0.5);
+  --pf-cream: #e8dcc8;
+  --pf-green: #6ecfb0;
+  --pf-green-dim: rgba(110,207,176,0.12);
+  --pf-red: #e0926f;
+  --pf-red-bright: #f08080;
+  --pf-red-dim: rgba(224,146,111,0.12);
+  --pf-gold: #c9b99a;
+  --pf-gold-dim: rgba(201,185,154,0.12);
+  --pf-indigo: #9b9fd4;
+  --pf-indigo-dim: rgba(155,159,212,0.12);
+  --pf-terra: #d49072;
+  --pf-olive: #b3b36a;
+
+  font-family: 'DM Sans', sans-serif;
+  color: var(--pf-text);
+  padding: 0 2.5rem 3rem;
+  max-width: 720px;
+}
+
+.pf-dash * { box-sizing: border-box; }
+
+.pf-header { padding: 1.5rem 0 1rem; border-bottom: 1px solid var(--pf-border-solid); }
+.pf-header h1 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 400; color: var(--pf-cream); }
+.pf-header-sub { font-size: 0.75rem; color: var(--pf-muted); margin-top: 4px; }
+.pf-header-stats { display: flex; gap: 24px; margin-top: 14px; }
+.pf-hstat-label { font-size: 0.65rem; color: var(--pf-muted); text-transform: uppercase; letter-spacing: 0.08em; }
+.pf-hstat-value { font-size: 1.05rem; font-weight: 700; margin-top: 3px; font-family: 'Cormorant Garamond', serif; }
+
+.pf-tabs { display: flex; gap: 6px; padding: 14px 0 10px; overflow-x: auto; scrollbar-width: none; }
+.pf-tabs::-webkit-scrollbar { display: none; }
+.pf-tab { flex-shrink: 0; padding: 7px 16px; border-radius: 20px; border: 1px solid var(--pf-border-solid); background: var(--pf-surface); color: var(--pf-muted); font-size: 0.78rem; font-weight: 500; cursor: pointer; white-space: nowrap; transition: all 0.2s; letter-spacing: 0.02em; }
+.pf-tab.active { background: var(--pf-terra); color: #1a0f08; border-color: var(--pf-terra); }
+
+.pf-content { padding: 4px 0; }
+.pf-tab-content.pf-hidden { display: none; }
+.pf-section-title { font-size: 0.68rem; color: var(--pf-gold); text-transform: uppercase; letter-spacing: 0.1em; margin: 20px 0 10px; font-weight: 600; }
+
+.pf-pos-card { background: var(--pf-card); border: 1px solid var(--pf-border-solid); border-radius: 12px; padding: 16px; margin-bottom: 10px; transition: all 0.2s; }
+.pf-pos-card:hover { background: var(--pf-card-hover); }
+.pf-pos-header { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+.pf-pos-ticker { font-size: 1.05rem; font-weight: 700; letter-spacing: 0.02em; font-family: 'Cormorant Garamond', serif; }
+.pf-pos-name { font-size: 0.72rem; color: var(--pf-muted); margin-top: 1px; }
+.pf-pos-right { text-align: right; margin-left: auto; }
+.pf-pos-pnl { font-size: 1.05rem; font-weight: 700; font-family: 'Cormorant Garamond', serif; }
+.pf-pos-cartera { font-size: 0.7rem; color: var(--pf-muted); margin-top: 1px; }
+.pf-pnl-pos { color: var(--pf-green); }
+.pf-pnl-neg { color: var(--pf-red-bright); }
+.pf-pnl-flat { color: var(--pf-muted); }
+
+.pf-pos-bar-bg { background: var(--pf-border-solid); border-radius: 99px; height: 5px; margin-bottom: 12px; overflow: hidden; }
+.pf-pos-bar { height: 100%; border-radius: 99px; }
+.pf-pos-tesis { font-size: 0.82rem; color: rgba(232,220,200,0.7); line-height: 1.6; margin-bottom: 12px; font-weight: 300; }
+.pf-pos-metrics { display: flex; gap: 6px; flex-wrap: wrap; }
+.pf-metric-pill { padding: 4px 10px; border-radius: 99px; font-size: 0.68rem; font-weight: 600; background: var(--pf-surface); border: 1px solid var(--pf-border-solid); color: var(--pf-muted); }
+.pf-metric-pill.pf-green { background: var(--pf-green-dim); border-color: var(--pf-green); color: var(--pf-green); }
+.pf-metric-pill.pf-gold { background: var(--pf-gold-dim); border-color: var(--pf-gold); color: var(--pf-gold); }
+.pf-metric-pill.pf-red { background: var(--pf-red-dim); border-color: var(--pf-red); color: var(--pf-red); }
+.pf-metric-pill.pf-indigo { background: var(--pf-indigo-dim); border-color: var(--pf-indigo); color: var(--pf-indigo); }
+
+.pf-conviction { display: flex; gap: 3px; align-items: center; margin-left: auto; }
+.pf-dot { width: 6px; height: 6px; border-radius: 50%; }
+.pf-dot.pf-filled { background: var(--pf-gold); }
+.pf-dot.pf-empty { background: var(--pf-border-solid); }
+
+.pf-table { width: 100%; border-collapse: collapse; }
+.pf-table th { font-size: 0.66rem; color: var(--pf-muted); text-transform: uppercase; letter-spacing: 0.05em; padding: 9px 10px; text-align: left; border-bottom: 1px solid var(--pf-border-solid); }
+.pf-table td { padding: 11px 10px; font-size: 0.85rem; border-bottom: 1px solid var(--pf-border); }
+.pf-table tr:last-child td { border-bottom: none; }
+.pf-per-cheap { color: var(--pf-green); font-weight: 700; }
+.pf-per-mid { color: var(--pf-gold); font-weight: 700; }
+.pf-per-rich { color: var(--pf-red); font-weight: 700; }
+
+.pf-table-wrap { background: var(--pf-card); border: 1px solid var(--pf-border-solid); border-radius: 12px; overflow: hidden; margin-bottom: 16px; }
+
+.pf-note-box { border-radius: 10px; padding: 13px 15px; font-size: 0.8rem; line-height: 1.65; margin-bottom: 12px; font-weight: 300; }
+.pf-note-gold { background: var(--pf-gold-dim); border: 1px solid var(--pf-gold); color: var(--pf-gold); }
+.pf-note-red { background: var(--pf-red-dim); border: 1px solid var(--pf-red); color: var(--pf-red); }
+.pf-note-green { background: var(--pf-green-dim); border: 1px solid var(--pf-green); color: var(--pf-green); }
+
+.pf-sector-row { margin-bottom: 15px; }
+.pf-sector-top { display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 5px; }
+.pf-sector-name { font-weight: 600; }
+.pf-sector-pct { font-weight: 700; }
+.pf-sector-bar-bg { background: var(--pf-border-solid); border-radius: 99px; height: 8px; overflow: hidden; }
+.pf-sector-bar { height: 100%; border-radius: 99px; }
+.pf-sector-detail { font-size: 0.7rem; color: var(--pf-muted); margin-top: 4px; }
+
+@media (max-width: 600px) {
+  .pf-dash { padding: 0 1.25rem 2rem; }
+  .pf-header-stats { gap: 16px; }
+}
