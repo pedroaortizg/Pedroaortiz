@@ -61,7 +61,8 @@ const POSTS = [
 // ── Estado ───────────────────────────────────────────────────────
 let currentTab = 'articulos';
 let previousTab = 'articulos';
-let treemapRendered = false;
+let portfolioRendered = false;
+let portfolioData = null;
 
 // ── Routing ──────────────────────────────────────────────────────
 function getSlugFromPath() {
@@ -78,113 +79,154 @@ function navigateToTab(tab) {
   window.history.pushState({ tab }, "", path);
 }
 
-// ── Treemap ──────────────────────────────────────────────────────
-function getColor(rend, type) {
-  if (type === "EFEC") return "#1a3a5c";
-  if (rend >= 20)  return "#1a9e6e";
-  if (rend >= 5)   return "#2d7d6b";
-  if (rend >= 0)   return "#3d6b5e";
-  if (rend >= -5)  return "#7a4a4a";
-  if (rend >= -15) return "#a03535";
-  return "#c0392b";
-}
+// ══════════════════════════════════════════════════════════════
+// PORTFOLIO DASHBOARD
+// ══════════════════════════════════════════════════════════════
 
-async function renderTreemap() {
-  if (treemapRendered) return;
+const PF_COLOR_VAR = {
+  indigo: "var(--pf-indigo)", gold: "var(--pf-gold)", green: "var(--pf-green)",
+  red: "var(--pf-red)", olive: "var(--pf-olive)", terra: "var(--pf-terra)",
+  muted: "var(--pf-muted)"
+};
+
+async function renderPortfolio() {
+  if (portfolioRendered) return;
   try {
     const res = await fetch("/portfolio.json");
     if (!res.ok) throw new Error("No encontrado");
-    const portfolio = await res.json();
-    const data = portfolio.positions;
+    portfolioData = await res.json();
 
-    const container = document.getElementById("treemap-container");
-    const W = container.getBoundingClientRect().width || 660;
-    const H = Math.round(W * 0.62);
-    const tooltip = document.getElementById("tooltip");
+    document.getElementById("pf-updated").textContent = "Al cierre · " + portfolioData.updated;
+    document.getElementById("pf-invertido").textContent = portfolioData.invertido_pct + "%";
+    document.getElementById("pf-efectivo").textContent = portfolioData.efectivo_pct + "%";
+    document.getElementById("pf-num-posiciones").textContent = portfolioData.num_posiciones;
 
-    const root = d3.hierarchy({children: data}).sum(d => d.pct);
-    d3.treemap().size([W, H]).padding(3).round(true)(root);
+    renderPfPosiciones(portfolioData);
+    renderPfPnl(portfolioData);
+    renderPfValuacion(portfolioData);
+    renderPfSectores(portfolioData);
 
-    const svg = d3.select("#treemap-container").append("svg")
-      .attr("width", W).attr("height", H)
-      .attr("viewBox", `0 0 ${W} ${H}`);
-
-    const cell = svg.selectAll("g")
-      .data(root.leaves())
-      .join("g")
-      .attr("transform", d => `translate(${d.x0},${d.y0})`);
-
-    cell.append("rect")
-      .attr("width",  d => Math.max(0, d.x1 - d.x0))
-      .attr("height", d => Math.max(0, d.y1 - d.y0))
-      .attr("rx", 4)
-      .attr("fill", d => getColor(d.data.rend, d.data.type))
-      .attr("stroke", "rgba(0,16,31,0.6)")
-      .attr("stroke-width", 1.5)
-      .style("cursor", "pointer")
-      .on("mousemove", function(event, d) {
-        const sign = d.data.rend > 0 ? "+" : "";
-        const rendStr = d.data.type === "EFEC" ? "—" : sign + d.data.rend.toFixed(2) + "%";
-        tooltip.style.display = "block";
-        tooltip.style.left = (event.clientX + 14) + "px";
-        tooltip.style.top  = (event.clientY - 10) + "px";
-        tooltip.innerHTML = `<strong style="font-size:15px;">${d.data.ticker}</strong><br>
-          <span style="color:rgba(232,220,200,0.6)">Portafolio</span> ${d.data.pct.toFixed(2)}%<br>
-          <span style="color:rgba(232,220,200,0.6)">Rendimiento</span> ${rendStr}`;
-      })
-      .on("mouseleave", () => tooltip.style.display = "none");
-
-    cell.each(function(d) {
-      const cw = d.x1 - d.x0;
-      const ch = d.y1 - d.y0;
-      if (cw < 28 || ch < 18) return;
-      const g = d3.select(this);
-      const sign = d.data.rend > 0 ? "+" : "";
-      const rendStr = d.data.type === "EFEC"
-        ? "efectivo" : sign + d.data.rend.toFixed(1) + "%";
-      const showRend = ch > 44 && cw > 40;
-      const showPct  = ch > 62 && cw > 40;
-      const fs = Math.min(14, Math.max(10, cw / 5));
-      const cy = ch / 2;
-      const off = showRend ? (showPct ? 10 : 8) : 0;
-
-      g.append("text")
-        .attr("x", cw/2).attr("y", cy - off)
-        .attr("text-anchor","middle").attr("dominant-baseline","middle")
-        .attr("fill","#e8dcc8").attr("font-size", fs).attr("font-weight","500")
-        .attr("font-family","DM Sans, sans-serif")
-        .text(d.data.ticker);
-
-      if (showRend) {
-        const rc = d.data.rend > 0 ? "#6ecfb0" : d.data.rend < 0 ? "#f08080" : "rgba(232,220,200,0.5)";
-        g.append("text")
-          .attr("x", cw/2).attr("y", cy - off + fs + 4)
-          .attr("text-anchor","middle").attr("dominant-baseline","middle")
-          .attr("fill", d.data.type === "EFEC" ? "rgba(232,220,200,0.5)" : rc)
-          .attr("font-size", Math.min(11, fs-1))
-          .attr("font-family","DM Sans, sans-serif")
-          .text(rendStr);
-      }
-
-      if (showPct) {
-        g.append("text")
-          .attr("x", cw/2).attr("y", cy - off + fs + (showRend ? 20 : 4))
-          .attr("text-anchor","middle").attr("dominant-baseline","middle")
-          .attr("fill","rgba(232,220,200,0.45)")
-          .attr("font-size", Math.min(10, fs-2))
-          .attr("font-family","DM Sans, sans-serif")
-          .text(d.data.pct.toFixed(1) + "%");
-      }
-    });
-
-    document.getElementById("treemap-updated").textContent =
-      "Actualizado: " + portfolio.updated + "  ·  TC: $" + portfolio.tc_usdmxn + " MXN/USD";
-
-    treemapRendered = true;
-  } catch(e) {
-    document.getElementById("treemap-container").innerHTML =
-      `<p style="color:rgba(232,220,200,0.4); font-size:14px; margin-top:1rem;">No se pudo cargar portfolio.json</p>`;
+    portfolioRendered = true;
+  } catch (e) {
+    document.getElementById("pf-tab-posiciones").innerHTML =
+      `<p style="color:rgba(232,220,200,0.4); font-size:14px;">No se pudo cargar portfolio.json</p>`;
   }
+}
+
+function pfConvictionDots(n) {
+  let html = '<div class="pf-conviction">';
+  for (let i = 0; i < 5; i++) {
+    html += `<div class="pf-dot ${i < n ? 'pf-filled' : 'pf-empty'}"></div>`;
+  }
+  return html + '</div>';
+}
+
+function pfMetricPills(metrics) {
+  return metrics.map(m => `<div class="pf-metric-pill ${m.c ? 'pf-' + m.c : ''}">${m.t}</div>`).join("");
+}
+
+function renderPfPosiciones(data) {
+  let html = "";
+  data.groups.forEach(group => {
+    html += `<div class="pf-section-title">${group.section}</div>`;
+    group.positions.forEach(p => {
+      const pnlClass = p.pnl > 0 ? "pf-pnl-pos" : p.pnl < 0 ? "pf-pnl-neg" : "pf-pnl-flat";
+      const sign = p.pnl > 0 ? "+" : "";
+      const barWidth = Math.min(100, Math.abs(p.cartera) * 8);
+      html += `
+        <div class="pf-pos-card">
+          <div class="pf-pos-header">
+            <div>
+              <div class="pf-pos-ticker" style="color:${PF_COLOR_VAR[p.color] || 'var(--pf-text)'}">${p.ticker}</div>
+              <div class="pf-pos-name">${p.name}</div>
+            </div>
+            ${pfConvictionDots(p.conviction)}
+            <div class="pf-pos-right">
+              <div class="pf-pos-pnl ${pnlClass}">${sign}${p.pnl}%</div>
+              <div class="pf-pos-cartera">${p.cartera}% cartera</div>
+            </div>
+          </div>
+          <div class="pf-pos-bar-bg"><div class="pf-pos-bar" style="width:${barWidth}%;background:${PF_COLOR_VAR[p.color] || 'var(--pf-muted)'}"></div></div>
+          <div class="pf-pos-tesis">${p.tesis}</div>
+          <div class="pf-pos-metrics">${pfMetricPills(p.metrics)}</div>
+        </div>`;
+    });
+  });
+
+  if (data.cash) {
+    html += `<div class="pf-section-title">Efectivo</div>
+      <div class="pf-pos-card" style="border-style:dashed">
+        <div class="pf-pos-header">
+          <div><div class="pf-pos-ticker" style="color:var(--pf-muted)">CASH</div><div class="pf-pos-name">Efectivo disponible</div></div>
+          <div class="pf-pos-right"><div class="pf-pos-pnl" style="color:var(--pf-gold)">${data.cash.pct}%</div><div class="pf-pos-cartera">reserva</div></div>
+        </div>
+        <div class="pf-pos-bar-bg"><div class="pf-pos-bar" style="width:100%;background:var(--pf-muted)"></div></div>
+        <div class="pf-pos-tesis">${data.cash.tesis}</div>
+        <div class="pf-pos-metrics">${pfMetricPills(data.cash.metrics)}</div>
+      </div>`;
+  }
+
+  document.getElementById("pf-tab-posiciones").innerHTML = html;
+}
+
+function renderPfPnl(data) {
+  const rows = data.pnl_table.map(r => {
+    const cls = r.sig === "cheap" ? "pf-per-cheap" : r.sig === "mid" ? "pf-per-mid" : "pf-per-rich";
+    const sign = r.pnl > 0 ? "+" : "";
+    const emoji = r.sig === "cheap" ? "🟢" : r.sig === "mid" ? "🟡" : "🔴";
+    return `<tr><td><strong>${r.ticker}</strong></td><td class="${cls}">${sign}${r.pnl}%</td><td>${r.cartera}%</td><td>${emoji}</td></tr>`;
+  }).join("");
+
+  document.getElementById("pf-tab-pnl").innerHTML = `
+    <div class="pf-section-title">Rendimiento por posición</div>
+    <div class="pf-table-wrap">
+      <table class="pf-table">
+        <thead><tr><th>Ticker</th><th>PnL %</th><th>Cartera</th><th></th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+    </div>`;
+}
+
+function renderPfValuacion(data) {
+  const rows = data.valuacion_table.map(r => {
+    const perCls = r.sigColor === "green" ? "pf-per-cheap" : r.sigColor === "red" ? "pf-per-rich" : "pf-per-mid";
+    return `<tr><td><strong>${r.ticker}</strong></td><td class="${perCls}">${r.per}</td><td>${r.crec}</td><td><span class="pf-metric-pill pf-${r.sigColor}" style="font-size:0.62rem">${r.sig}</span></td></tr>`;
+  }).join("");
+
+  document.getElementById("pf-tab-valuacion").innerHTML = `
+    <div class="pf-section-title">PER Forward — de barato a caro</div>
+    <div class="pf-table-wrap">
+      <table class="pf-table">
+        <thead><tr><th>Ticker</th><th>PER Fwd</th><th>Crecimiento</th><th>Señal</th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+    </div>`;
+}
+
+function renderPfSectores(data) {
+  const rows = data.sectores.map(s => `
+    <div class="pf-sector-row">
+      <div class="pf-sector-top">
+        <span class="pf-sector-name" style="color:${PF_COLOR_VAR[s.color] || 'var(--pf-text)'}">${s.name}</span>
+        <span class="pf-sector-pct">${s.pct}%</span>
+      </div>
+      <div class="pf-sector-bar-bg"><div class="pf-sector-bar" style="width:${s.pct}%;background:${PF_COLOR_VAR[s.color] || 'var(--pf-muted)'}"></div></div>
+      <div class="pf-sector-detail">${s.detail}</div>
+    </div>`).join("");
+
+  document.getElementById("pf-tab-sectores").innerHTML = `
+    <div class="pf-section-title">Distribución por sector</div>
+    <div class="pf-table-wrap" style="padding:16px">${rows}</div>`;
+}
+
+function showPfTab(tab) {
+  const tabs = ['posiciones', 'pnl', 'valuacion', 'sectores'];
+  tabs.forEach((t, i) => {
+    document.getElementById('pf-tab-' + t).classList.add('pf-hidden');
+    document.querySelectorAll('.pf-tab')[i].classList.remove('active');
+  });
+  document.getElementById('pf-tab-' + tab).classList.remove('pf-hidden');
+  document.querySelectorAll('.pf-tab')[tabs.indexOf(tab)].classList.add('active');
 }
 
 // ── Render listas de posts ────────────────────────────────────────
@@ -272,7 +314,7 @@ function switchTab(tab, btn, updateUrl = true) {
     currentTab = tab;
     if (updateUrl) navigateToTab(tab);
   }
-  if (tab === "finanzas") renderTreemap();
+  if (tab === "finanzas") renderPortfolio();
   document.querySelector(".nav-tabs").classList.remove("open");
   window.scrollTo(0, 0);
 }
@@ -289,11 +331,9 @@ window.addEventListener("popstate", () => handleRoute());
 function handleRoute() {
   const slug = getSlugFromPath();
 
-  // Es un post
   const post = POSTS.find(p => p.slug === slug);
   if (post) { openPost(slug); return; }
 
-  // Es una pestaña
   if (slug === "finanzas") {
     switchTab("finanzas", document.querySelectorAll(".nav-tabs button")[1], false);
     return;
@@ -303,7 +343,6 @@ function handleRoute() {
     return;
   }
 
-  // Default: artículos
   switchTab("articulos", document.querySelectorAll(".nav-tabs button")[0], false);
 }
 
