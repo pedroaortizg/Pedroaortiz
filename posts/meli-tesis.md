@@ -31,5 +31,6 @@ El riesgo macro de Brasil (tasas altas, política fiscal) es más real y vale la
 Mantengo la posición. Si hay una corrección significativa en el precio, agregaría.
 
 ---
-
+<img src="/firma-footer.png" alt="Firma de Pedro" class="post-firma" />
+Pedro Antonio Ortiz
 *Esta no es una recomendación de inversión. Es mi tesis personal con mi propio capital en juego.*
