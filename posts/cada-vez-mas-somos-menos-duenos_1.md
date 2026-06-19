@@ -55,7 +55,7 @@ Entonces, cuando todo se trata de acceso, esos grados de autonomía se transform
 La idea de que el acceso nos hace más libres, en realidad solo veo una jaula con mejores vistas. El triunfo de este sistema no es que hayamos dejado de poseer, sino que hayamos aprendido a agradecer el privilegio de alquilar. Mientras sigamos confundiendo la comodidad del acceso con el poder de elegir, seguiremos pagando la renta de un mundo que creíamos nuestro.
 
 ---
-
+<img src="/firma-footer.png" alt="Firma de Pedro" class="post-firma" />
 Pedro Antonio Ortiz Gallegos
 
 *Junio 2026*
