@@ -52,6 +52,9 @@ No es una estrategia complicada de entender sino, una difícil de ejecutar, porq
 
 La paciencia, en este caso, no es una virtud. Es una ventaja estadística.
 
+---
+<img src="/firma-footer.png" alt="Firma de Pedro" class="post-firma" />
+
 Pedro A. Ortiz
 
 ---
