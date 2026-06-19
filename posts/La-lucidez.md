@@ -27,5 +27,6 @@ Quizá la autoconciencia nunca puede ser completa. Siempre existe un punto ciego
 Desde esta perspectiva, la sabiduría no consiste en afirmar "soy lúcido", sino en reconocer las limitaciones de la propia capacidad para determinarlo.
 
 La persona verdaderamente lúcida no es la que está convencida de su lucidez, sino la que sospecha de ella.
-
+---
+<img src="/firma-footer.png" alt="Firma de Pedro" class="post-firma" />
 Pedro A. Ortiz
