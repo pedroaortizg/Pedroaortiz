@@ -105,7 +105,7 @@ La tercera es que la posición geopolítica es un factor económico, no solo pol
 El siglo que viene no será chino ni hindú en términos absolutos. Pero sin duda la demografía ascendente, el consumo interno ya activo, la posición diplomática sin fricción sistémica con el capital global, India, con todos sus problemas y sus complejidades tiene un motor no solo encendido, acelerando.
 
 ---
-
+<img src="/firma-footer.png" alt="Firma de Pedro" class="post-firma" />
 Pedro Antonio Ortiz Gallegos
 
 *Las estadísticas citadas en este artículo provienen del FMI, Banco Mundial, McKinsey Global Institute, CEIC Data y fuentes oficiales de los gobiernos de China e India.*
