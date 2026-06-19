@@ -580,6 +580,6 @@ nav {
 }
 
 @media (max-width: 600px) {
-  .logo-firma { height: 18px; }
-  .post-firma { height: 44px; }
+  .logo-firma { height: 40px; }
+  .post-firma { height: 80px; }
 }
