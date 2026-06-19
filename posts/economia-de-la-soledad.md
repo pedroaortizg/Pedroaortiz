@@ -42,6 +42,8 @@ Lo que sí se puede argumentar con evidencia es que el sistema encontró en la s
 
 Quizás esa sea la conexión más certera e incómoda entre el tecnofeudalismo y la soledad. No hay villano en esta historia. Solo un sistema que descubrió que la soledad era rentable y supo aprovecharla.
 
+---
+<img src="/firma-footer.png" alt="Firma de Pedro" class="post-firma" />
 Pedro A. Ortiz
 
 *Referencias: Yanis Varoufakis, Technofeudalism: What Killed Capitalism (2023). Documentos internos de Meta filtrados por Frances Haugen (2021). Betty Orozco, plática en el trabajo (2026). Romina Corral, aporte de video de referencia (2026)*
