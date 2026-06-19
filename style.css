@@ -557,3 +557,29 @@ nav {
   .pf-dash { padding: 0 1.25rem 2rem; }
   .pf-header-stats { gap: 16px; }
 }
+
+/* ── Firma ── */
+.logo-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-firma {
+  height: 22px;
+  width: auto;
+  opacity: 0.85;
+}
+
+.post-firma {
+  height: 56px;
+  width: auto;
+  margin: 1.5rem 0 0.5rem;
+  opacity: 0.9;
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .logo-firma { height: 18px; }
+  .post-firma { height: 44px; }
+}
