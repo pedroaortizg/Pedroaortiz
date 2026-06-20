@@ -31,7 +31,11 @@ nav {
   padding: 0 2.5rem;
   height: 64px;
   border-bottom: 1px solid var(--teal-bd);
-  background: rgba(0,16,31,0.97);
+  background-color: rgba(0,16,31,0.97);
+  background-image: url('nav-pattern.png');
+  background-repeat: repeat-x;
+  background-position: left center;
+  background-size: auto 70px;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -566,13 +570,13 @@ nav {
 }
 
 .logo-firma {
-  height: 50px;
+  height: 22px;
   width: auto;
   opacity: 0.85;
 }
 
 .post-firma {
-  height: 80px;
+  height: 56px;
   width: auto;
   margin: 1.5rem 0 0.5rem;
   opacity: 0.9;
@@ -580,6 +584,6 @@ nav {
 }
 
 @media (max-width: 600px) {
-  .logo-firma { height: 40px; }
-  .post-firma { height: 80px; }
+  .logo-firma { height: 18px; }
+  .post-firma { height: 44px; }
 }
