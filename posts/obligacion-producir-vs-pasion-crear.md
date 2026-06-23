@@ -65,6 +65,8 @@ Honestamente no tengo una conclusión para este texto, y eso es a propósito. Te
 ¿Por qué se necesita una economía con un crecimiento económico infinito? ¿Eso es posible? ¿Qué incentivos tiene una corporación para aumentar siempre la productividad? ¿Y qué incentivo tienen los leñadores? ¿Es la IA una puerta de acceso a un mundo con mayor libertad o solo mayor exigencia? ¿Qué **crearías** con más tiempo libre? ¿Lo necesitas? o el sistema nos exige más horas por que de no ser así brotaría aún más la locura?
 
 
+<img src="/firma-footer.png" alt="Firma de Pedro" class="post-firma" />
+
 Pedro A. Ortiz
 
 *Junio 2026*
