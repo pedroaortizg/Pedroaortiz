@@ -4,7 +4,7 @@
 
 ---
 
-"La obligación de producir mata la pasión por crear". Es la premisa de la que parte este artículo, y para quien ha sentido alguna vez que un hobby se volvió trabajo el día que empezó a generar ingresos, no necesita más explicación. ¿Qué pasaría si esa obligación se transfiriera para una parte significativa de la humanidad?
+***"La obligación de producir mata la pasión por crear"***. Es la premisa de la que parte este artículo, y para quien ha sentido alguna vez que un hobby se volvió trabajo el día que empezó a generar ingresos, no necesita más explicación. ¿Qué pasaría si esa obligación se transfiriera para una parte significativa de la humanidad?
 
 La pregunta no es nueva. Lo nuevo aquí es que hay una tecnología sobre la mesa que podría volver esa pregunta una realidad en lugar de hipotética.
 
