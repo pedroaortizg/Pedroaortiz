@@ -1,6 +1,15 @@
 // ── Índice de posts ──────────────────────────────────────────────
 // slug = lo que aparece en la URL: pedroaortiz.com/slug
 const POSTS = [
+  {
+    slug: "obligacion-producir-vs-pasion-crear",
+    file: "posts/obligacion-producir-vs-pasion-crear.md",
+    title: "La obigación por producir mata la pasión por crear",
+    date: "Junio 2026", readTime: "8 min", category: "Economía",
+    section: "articulos",
+    excerpt: "Sobre la quinta gran revolución del esquema"
+  },
+
  {
     slug: "cada-vez-mas-somos-menos-duenos_1",
     file: "posts/cada-vez-mas-somos-menos-duenos_1.md",
