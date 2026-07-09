@@ -5,7 +5,7 @@ const POSTS = [
     slug: "verdades-colectivas",
     file: "posts/verdades-colectivas.md",
     title: "Las verdades prestadas",
-    date: "Junio 2026", readTime: "5 min", category: "Economía",
+    date: "Junio 2026", readTime: "5 min", category: "Blog",
     section: "articulos",
     excerpt: "¿En qué momento decidimos lo que es verdad?"
   },
