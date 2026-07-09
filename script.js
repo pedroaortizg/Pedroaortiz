@@ -1,12 +1,20 @@
 // ── Índice de posts ──────────────────────────────────────────────
 // slug = lo que aparece en la URL: pedroaortiz.com/slug
 const POSTS = [
-  {
+    {
     slug: "obligacion-producir-vs-pasion-crear",
     file: "posts/obligacion-producir-vs-pasion-crear.md",
     title: "La obligación por producir mata la pasión por crear",
-    date: "Junio 2026", readTime: "8 min", category: "Economía",
+    date: "Junio 2026", readTime: "5 min", category: "Economía",
     section: "articulos",
+    excerpt: "¿En qué momento decidimos lo que es verdad?"
+  },
+  {
+    slug: "obligacion-producir-vs-pasion-crear",
+    file: "posts/verdades-colectivas.md",
+    title: "# Las verdades prestadas",
+    date: "Julio 2026", readTime: "5 min", category: "Blog",
+    section: "blog",
     excerpt: "Sobre la quinta gran revolución del esquema"
   },
 
