@@ -12,7 +12,7 @@ Lo más interesante es que las necesitamos.
 
 --- 
 
-##***Homo sum, humani nihil a me alienum puto***
+## ***Homo sum, humani nihil a me alienum puto***
 
 Las verdades colectivas permiten saber quién pertenece y quién no, qué comportamientos se recompensan y cuáles se sancionan, qué preguntas vale la pena hacer y cuáles ya tienen respuesta.
 
