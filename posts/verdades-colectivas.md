@@ -1,4 +1,4 @@
-# Las verdades que no elegimos creer
+# Las verdades prestadas
 
 *Julio 2026 · 5 min lectura · Artículos*
 
