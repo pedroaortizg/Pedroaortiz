@@ -2,9 +2,9 @@
 // slug = lo que aparece en la URL: pedroaortiz.com/slug
 const POSTS = [
     {
-    slug: "obligacion-producir-vs-pasion-crear",
-    file: "posts/obligacion-producir-vs-pasion-crear.md",
-    title: "La obligación por producir mata la pasión por crear",
+    slug: "verdades-colectivas",
+    file: "posts/verdades-colectivas.md",
+    title: "Las verdades prestadas",
     date: "Junio 2026", readTime: "5 min", category: "Economía",
     section: "articulos",
     excerpt: "¿En qué momento decidimos lo que es verdad?"
