@@ -48,6 +48,8 @@ Este artículo no propone que las verdades colectivas sean malas. Sin ellas no h
 
 Mirar a otro lado también es una elección.
 
+<img src="/firma-footer.png" alt="Firma de Pedro" class="post-firma" />
+
 Pedro A. Ortiz
 
 *Julio 2026*
