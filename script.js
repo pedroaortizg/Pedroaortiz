@@ -11,13 +11,12 @@ const POSTS = [
   },
   {
     slug: "obligacion-producir-vs-pasion-crear",
-    file: "posts/verdades-colectivas.md",
-    title: "# Las verdades prestadas",
-    date: "Julio 2026", readTime: "5 min", category: "Blog",
+    file: "posts/obligacion-producir-vs-pasion-crear.md",
+    title: "La obligación por producir mata la pasión por crear",
+    date: "Julio 2026", readTime: "7 min", category: "Blog",
     section: "blog",
     excerpt: "Sobre la quinta gran revolución del esquema"
   },
-
  {
     slug: "cada-vez-mas-somos-menos-duenos_1",
     file: "posts/cada-vez-mas-somos-menos-duenos_1.md",
