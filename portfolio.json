@@ -133,7 +133,7 @@
   ],
   "cash": {
     "pct": 9,
-    "tesis": "Reserva reducida tras despliegue reciente en META, AMZN y GOOGL. Prioridad: reconstruir el colchón liberando capital de la salida de SOXL.",
+    "tesis": "Mantener entre 10-15%.",
     "metrics": [{"t":"Reconstruir","c":"red"}]
   },
   "pnl_table": [
