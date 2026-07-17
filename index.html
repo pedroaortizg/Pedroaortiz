@@ -14,6 +14,10 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
   <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <!-- Widget: Perfil de inversionista (React) -->
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script defer src="investor-profile-widget.js"></script>
 </head>
 <body>
   <nav>
@@ -47,6 +51,15 @@
       <p>Mercados, portafolios y el pensamiento detrás de las decisiones de inversión.</p>
     </div>
 
+    <!-- Widget: Perfil de inversionista -->
+    <div class="inner" style="padding-bottom: 0;">
+      <div class="section-title">¿Qué tipo de inversionista eres?</div>
+      <div class="section-sub">Un cuestionario rápido para entender tu perfil de riesgo</div>
+      <button class="widget-open-btn" onclick="openWidgetModal()">
+        Descubrir mi perfil →
+      </button>
+    </div>
+
     <div class="pf-dash">
       <div class="pf-header">
         <h1>Mi Portafolio</h1>
@@ -66,14 +79,12 @@
           </div>
         </div>
       </div>
-
       <div class="pf-tabs">
         <div class="pf-tab active" onclick="showPfTab('posiciones')">Posiciones</div>
         <div class="pf-tab" onclick="showPfTab('pnl')">P&amp;L</div>
         <div class="pf-tab" onclick="showPfTab('valuacion')">Valuación</div>
         <div class="pf-tab" onclick="showPfTab('sectores')">Sectores</div>
       </div>
-
       <div class="pf-content">
         <div id="pf-tab-posiciones" class="pf-tab-content"></div>
         <div id="pf-tab-pnl" class="pf-tab-content pf-hidden"></div>
@@ -81,8 +92,16 @@
         <div id="pf-tab-sectores" class="pf-tab-content pf-hidden"></div>
       </div>
     </div>
-
     <div class="inner" id="finanzas-list"></div>
+  </div>
+
+  <!-- MODAL: Widget de perfil de inversionista -->
+  <div id="widget-modal" class="widget-modal">
+    <div class="widget-modal-backdrop" onclick="closeWidgetModal()"></div>
+    <div class="widget-modal-panel">
+      <button class="widget-modal-close" onclick="closeWidgetModal()" aria-label="Cerrar">&times;</button>
+      <div id="investor-profile-root"></div>
+    </div>
   </div>
   <!-- BLOG -->
   <div id="tab-blog" class="content">
@@ -104,5 +123,20 @@
   </div>
   <div id="tooltip" class="portfolio-tooltip"></div>
   <script src="script.js"></script>
+
+  <!-- Modal del widget -->
+  <script>
+    function openWidgetModal() {
+      document.getElementById('widget-modal').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeWidgetModal() {
+      document.getElementById('widget-modal').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeWidgetModal();
+    });
+  </script>
 </body>
 </html>
