@@ -27,7 +27,8 @@ La versión moderna de esa cama no la arma nadie más que nosotros mismos. Para 
 
 ¿Cuánto de lo que dices que te gusta es realmente tuyo, y cuánto es simplemente lo que no contradice la versión de ti que ya circula? ¿El azul o el naranja, las tortugas y el mar, la cumbia o la clásica, siguen ahí? O ya los recortaste hace tiempo porque no combinaban con nada más de lo que mostrabas? Y si mañana alguien te preguntara quién eres, de verdad, sin recurrir al estándar, ¿cuánto tardarías en encontrar una respuesta que no fuera un verbo?
 
-
+<img src="/firma-footer.png" alt="Firma de Pedro" class="post-firma" />
+---
 Pedro A. Ortiz
 
 *Julio 2026*
