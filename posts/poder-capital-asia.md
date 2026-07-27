@@ -38,4 +38,3 @@ El error es ignorarla completa por miedo al ruido geopolítico.
 <img src="/firma-footer.png" alt="Firma de Pedro" class="post-firma" />
 
 Pedro A. Ortiz
-*Próximo artículo: el caso para TSMC como posición estructural en un portafolio de largo plazo.*
