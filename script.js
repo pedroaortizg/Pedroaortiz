@@ -1,6 +1,14 @@
 // ── Índice de posts ──────────────────────────────────────────────
 // slug = lo que aparece en la URL: pedroaortiz.com/slug
 const POSTS = [
+        {
+    slug: "mi-existencia-no-esta-atada-a-un-verbo",
+    file: "posts/mi-existencia-no-esta-atada-a-un-verbo.md",
+    title: "Mi existencia no está atada a un verbo",
+    date: "Julio 2026", readTime: "5 min", category: "Blog",
+    section: "blog",
+    excerpt: "¿Quien eres más allá de lo que se ve?"
+  },
     {
     slug: "verdades-colectivas",
     file: "posts/verdades-colectivas.md",
