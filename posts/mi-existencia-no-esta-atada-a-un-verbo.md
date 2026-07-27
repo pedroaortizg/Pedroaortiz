@@ -12,7 +12,7 @@ Porque así funciona casi siempre, lo primero que se sabe de una persona es su t
 
 ---
 
-##Una historia...
+## Una historia...
 ---
 
 En la mitología griega, Procusto era un herrero y bandido que vivía junto al camino entre Eleusis y Atenas. Se hacía pasar por un anfitrión generoso e invitaba a los viajeros a pasar la noche en su casa y les ofrecía una cama, prometiendo que se ajustaba exactamente a cualquier cuerpo. La promesa era una ***trampa***. Si el viajero era más bajo que el colchón, lo estiraba a martillazos hasta que encajara. Si era más alto, le cortaba las piernas con un hacha hasta emparejarlo a la medida. **Realmente la cama se ajustaba a cualquier cuerpo.**
@@ -23,7 +23,7 @@ La versión moderna de esa cama no la arma nadie más que nosotros mismos. Para 
 
 ---
 
-##***¿Y quién queda cuando dejas de cortarte? ¿Qué te apasiona de verdad, no lo que se supone que debería apasionarte según el rol que traes puesto? ¿Qué te hace sentir vivo?***
+## ***¿Y quién queda cuando dejas de cortarte? ¿Qué te apasiona de verdad, no lo que se supone que debería apasionarte según el rol que traes puesto? ¿Qué te hace sentir vivo?***
 
 ¿Cuánto de lo que dices que te gusta es realmente tuyo, y cuánto es simplemente lo que no contradice la versión de ti que ya circula? ¿El azul o el naranja, las tortugas y el mar, la cumbia o la clásica, siguen ahí? O ya los recortaste hace tiempo porque no combinaban con nada más de lo que mostrabas? Y si mañana alguien te preguntara quién eres, de verdad, sin recurrir al estándar, ¿cuánto tardarías en encontrar una respuesta que no fuera un verbo?
 
