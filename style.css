@@ -765,3 +765,95 @@ nav {
   .widget-modal { padding: 12px; }
   .widget-modal-panel { max-height: 92vh; border-radius: 12px; }
 }
+
+/* ══════════════════════════════════════════════════════════════
+   ATMÓSFERA — adaptado del rediseño de Claude Design
+   ══════════════════════════════════════════════════════════════ */
+
+.hero-atmos { position: relative; overflow: hidden; }
+
+.atmos-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.atmos-orb-1 {
+  width: 420px;
+  height: 420px;
+  top: -60px;
+  right: -60px;
+  background: radial-gradient(circle, rgba(201,185,154,0.4) 0%, transparent 68%);
+  animation: respira 9s ease-in-out infinite alternate;
+}
+
+.atmos-orb-2 {
+  width: 320px;
+  height: 320px;
+  top: 100px;
+  right: 20%;
+  background: radial-gradient(circle, rgba(42,132,141,0.5) 0%, transparent 68%);
+  animation: respiraLento 13s ease-in-out infinite alternate;
+}
+
+.hero-atmos > *:not(.atmos-orb) { position: relative; z-index: 1; }
+
+.hero-rule {
+  width: 64px;
+  height: 1px;
+  background: var(--teal-hi);
+  margin: 4px 0 4px;
+  animation: expandeRule 1s 0.3s cubic-bezier(0.16,1,0.3,1) both;
+}
+
+@keyframes expandeRule {
+  from { width: 0; opacity: 0; }
+  to   { width: 64px; opacity: 1; }
+}
+
+.scroll-hint {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 1.5rem;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--hint);
+  animation: fadeUp 0.6s 0.5s cubic-bezier(0.16,1,0.3,1) both;
+}
+
+.scroll-hint i {
+  display: block;
+  width: 28px;
+  height: 1px;
+  background: var(--hint);
+  position: relative;
+}
+
+.scroll-hint i::after {
+  content: '';
+  position: absolute;
+  right: 0; top: -2px;
+  width: 5px; height: 5px;
+  border-right: 1px solid var(--hint);
+  border-bottom: 1px solid var(--hint);
+  transform: rotate(45deg);
+}
+
+@keyframes respira {
+  from { transform: translate3d(0,0,0) scale(1); opacity: 0.75; }
+  to   { transform: translate3d(6vw,-4vh,0) scale(1.18); opacity: 1; }
+}
+
+@keyframes respiraLento {
+  from { transform: translate3d(0,0,0) scale(1.1); opacity: 0.6; }
+  to   { transform: translate3d(-7vw,5vh,0) scale(0.92); opacity: 0.95; }
+}
+
+@media (max-width: 600px) {
+  .atmos-orb-1 { width: 240px; height: 240px; }
+  .atmos-orb-2 { width: 180px; height: 180px; }
+}
