@@ -767,107 +767,39 @@ nav {
 }
 
 /* ══════════════════════════════════════════════════════════════
-   ATMÓSFERA — adaptado del rediseño de Claude Design
+   ATMÓSFERA — motor reactivo (adaptado del rediseño de Claude Design)
    ══════════════════════════════════════════════════════════════ */
 
-.hero-atmos { position: relative; overflow: hidden; }
-
-.atmos-orb {
-  position: absolute;
-  filter: blur(60px);
-  pointer-events: none;
-  z-index: 0;
+/* ── Nav reactivo al scroll ── */
+nav {
+  transform: scale(calc(1 - var(--nav, 0) * 0.06));
+  transform-origin: left center;
+  transition: transform 0.3s cubic-bezier(0.16,1,0.3,1);
+  box-shadow: 0 8px 30px rgba(0,0,0,calc(var(--nav, 0) * 0.28));
 }
 
-.atmos-orb-1 {
-  width: 420px;
-  height: 420px;
-  top: -60px;
-  right: -60px;
-  background: radial-gradient(circle, rgba(201,185,154,0.4) 0%, transparent 68%);
-  animation: respira 9s ease-in-out infinite alternate, ondula 14s ease-in-out infinite, giroLento 40s linear infinite;
+/* ── Hero reactivo al scroll (fade + parallax) ── */
+.content.active .hero h1 {
+  opacity: calc(1 - var(--hp, 0) * 0.8);
+  filter: blur(calc(var(--hp, 0) * 3px));
+  transform: translateY(calc(var(--hp, 0) * -90px)) scale(calc(1 - var(--hp, 0) * 0.06));
 }
 
-.atmos-orb-2 {
-  width: 320px;
-  height: 320px;
-  top: 100px;
-  right: 20%;
-  background: radial-gradient(circle, rgba(42,132,141,0.5) 0%, transparent 68%);
-  animation: respiraLento 13s ease-in-out infinite alternate, ondula 18s ease-in-out infinite reverse, giroLento 55s linear infinite reverse;
+.content.active .hero p {
+  opacity: calc(1 - var(--hp, 0) * 1.1);
+  transform: translateY(calc(var(--hp, 0) * -46px));
 }
 
-.atmos-pulse {
-  position: absolute;
-  top: 20px;
-  left: 620px;
-  width: 260px;
-  height: 260px;
-  border-radius: 50%;
-  border: 1px solid rgba(201,185,154,0.5);
-  pointer-events: none;
-  z-index: 0;
-  transform-origin: center;
-  animation: ondaLsdFix 4.5s ease-out infinite;
+.content.active .hero-label {
+  opacity: calc(1 - var(--hp, 0) * 1.4);
 }
-
-.atmos-pulse-2 {
-  animation-delay: 2.25s;
-  border-color: rgba(42,132,141,0.5);
-}
-
-@keyframes ondaLsdFix {
-  from { transform: scale(0.1); opacity: 0.55; }
-  to   { transform: scale(1); opacity: 0; }
-}
-
-@media (max-width: 900px) {
-  .atmos-pulse { left: auto; right: 5%; }
-}
-
-.hero-atmos > *:not(.atmos-orb) { position: relative; z-index: 1; }
 
 .hero-rule {
-  width: 64px;
+  width: calc(64px + var(--hp, 0) * 420px);
+  max-width: 70%;
   height: 1px;
-  background: var(--teal-hi);
+  background: linear-gradient(90deg, var(--accent), rgba(201,185,154,0));
   margin: 4px 0 4px;
-  animation: expandeRule 1s 0.3s cubic-bezier(0.16,1,0.3,1) both;
-}
-
-@keyframes expandeRule {
-  from { width: 0; opacity: 0; }
-  to   { width: 64px; opacity: 1; }
-}
-
-.scroll-hint {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-top: 1.5rem;
-  font-size: 10px;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--hint);
-  animation: fadeUp 0.6s 0.5s cubic-bezier(0.16,1,0.3,1) both;
-}
-
-.scroll-hint i {
-  display: block;
-  width: 28px;
-  height: 1px;
-  background: var(--hint);
-  position: relative;
-}
-
-.scroll-hint i::after {
-  content: '';
-  position: absolute;
-  right: 0; top: -2px;
-  width: 5px; height: 5px;
-  border-right: 1px solid var(--hint);
-  border-bottom: 1px solid var(--hint);
-  transform: rotate(45deg);
 }
 
 @keyframes respira {
@@ -881,6 +813,4 @@ nav {
 }
 
 @media (max-width: 600px) {
-  .atmos-orb-1 { width: 240px; height: 240px; }
-  .atmos-orb-2 { width: 180px; height: 180px; }
 }
