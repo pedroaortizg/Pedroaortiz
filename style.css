@@ -143,7 +143,6 @@ nav {
   text-transform: uppercase;
   color: var(--teal-hi);
   font-weight: 500;
-  animation: fadeUp 0.5s 0.05s cubic-bezier(0.16,1,0.3,1) both;
 }
 
 .hero h1 {
@@ -153,7 +152,6 @@ nav {
   line-height: 1.1;
   color: var(--text);
   max-width: 600px;
-  animation: fadeUp 0.6s 0.1s cubic-bezier(0.16,1,0.3,1) both;
 }
 
 .hero p {
@@ -162,7 +160,6 @@ nav {
   max-width: 460px;
   line-height: 1.8;
   font-weight: 300;
-  animation: fadeUp 0.6s 0.18s cubic-bezier(0.16,1,0.3,1) both;
 }
 
 /* ── Inner ── */
@@ -784,8 +781,8 @@ nav {
   filter: blur(calc(var(--hp, 0) * 3px));
   transform: translateY(calc(var(--hp, 0) * -90px)) scale(calc(1 - var(--hp, 0) * 0.06));
   text-shadow:
-    calc((var(--fx, .5) - .5) * var(--lsd, 0) * -26px) calc((var(--fy, .5) - .5) * var(--lsd, 0) * -14px) 0 rgba(33,102,109,calc(.55 * var(--lsd, 0))),
-    calc((var(--fx, .5) - .5) * var(--lsd, 0) * 26px) calc((var(--fy, .5) - .5) * var(--lsd, 0) * 14px) 0 rgba(201,185,154,calc(.45 * var(--lsd, 0)));
+    calc((var(--fx, .5) - .5) * var(--lsd, 0) * -26px) calc((var(--fy, .5) - .5) * var(--lsd, 0) * -14px) 0px rgba(33,102,109,0.55),
+    calc((var(--fx, .5) - .5) * var(--lsd, 0) * 26px) calc((var(--fy, .5) - .5) * var(--lsd, 0) * 14px) 0px rgba(201,185,154,0.45);
 }
 
 .content.active .hero p {
