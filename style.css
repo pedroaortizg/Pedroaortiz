@@ -774,7 +774,6 @@ nav {
 
 .atmos-orb {
   position: absolute;
-  border-radius: 50%;
   filter: blur(60px);
   pointer-events: none;
   z-index: 0;
@@ -786,7 +785,7 @@ nav {
   top: -60px;
   right: -60px;
   background: radial-gradient(circle, rgba(201,185,154,0.4) 0%, transparent 68%);
-  animation: respira 9s ease-in-out infinite alternate;
+  animation: respira 9s ease-in-out infinite alternate, ondula 14s ease-in-out infinite, giroLento 40s linear infinite;
 }
 
 .atmos-orb-2 {
@@ -795,7 +794,35 @@ nav {
   top: 100px;
   right: 20%;
   background: radial-gradient(circle, rgba(42,132,141,0.5) 0%, transparent 68%);
-  animation: respiraLento 13s ease-in-out infinite alternate;
+  animation: respiraLento 13s ease-in-out infinite alternate, ondula 18s ease-in-out infinite reverse, giroLento 55s linear infinite reverse;
+}
+
+.atmos-pulse {
+  position: absolute;
+  top: 20px;
+  left: 620px;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  border: 1px solid rgba(201,185,154,0.5);
+  pointer-events: none;
+  z-index: 0;
+  transform-origin: center;
+  animation: ondaLsdFix 4.5s ease-out infinite;
+}
+
+.atmos-pulse-2 {
+  animation-delay: 2.25s;
+  border-color: rgba(42,132,141,0.5);
+}
+
+@keyframes ondaLsdFix {
+  from { transform: scale(0.1); opacity: 0.55; }
+  to   { transform: scale(1); opacity: 0; }
+}
+
+@media (max-width: 900px) {
+  .atmos-pulse { left: auto; right: 5%; }
 }
 
 .hero-atmos > *:not(.atmos-orb) { position: relative; z-index: 1; }
