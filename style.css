@@ -802,6 +802,37 @@ nav {
   margin: 4px 0 4px;
 }
 
+@keyframes ondaClick {
+  from { scale: 0.1; opacity: 0.55; }
+  to   { scale: 1; opacity: 0; }
+}
+
+/* ── Efecto cromático (doble visión) replicado en otros títulos ── */
+.section-title,
+.pf-header h1,
+.post-body h1,
+.post-body h2 {
+  text-shadow:
+    calc((var(--fx, .5) - .5) * var(--lsd, 0) * -14px) calc((var(--fy, .5) - .5) * var(--lsd, 0) * -8px) 0px rgba(33,102,109,0.5),
+    calc((var(--fx, .5) - .5) * var(--lsd, 0) * 14px) calc((var(--fy, .5) - .5) * var(--lsd, 0) * 8px) 0px rgba(201,185,154,0.4);
+}
+
+.card h3,
+.blog-item h4,
+.pf-pos-ticker,
+.card-tag,
+.blog-arrow {
+  text-shadow:
+    calc((var(--fx, .5) - .5) * var(--lsd, 0) * -6px) calc((var(--fy, .5) - .5) * var(--lsd, 0) * -3px) 0px rgba(33,102,109,0.45),
+    calc((var(--fx, .5) - .5) * var(--lsd, 0) * 6px) calc((var(--fy, .5) - .5) * var(--lsd, 0) * 3px) 0px rgba(201,185,154,0.35);
+}
+
+.logo {
+  text-shadow:
+    calc((var(--fx, .5) - .5) * var(--lsd, 0) * -6px) calc((var(--fy, .5) - .5) * var(--lsd, 0) * -3px) 0px rgba(33,102,109,0.4),
+    calc((var(--fx, .5) - .5) * var(--lsd, 0) * 6px) calc((var(--fy, .5) - .5) * var(--lsd, 0) * 3px) 0px rgba(201,185,154,0.3);
+}
+
 @keyframes respira {
   from { transform: translate3d(0,0,0) scale(1); opacity: 0.75; }
   to   { transform: translate3d(6vw,-4vh,0) scale(1.18); opacity: 1; }
