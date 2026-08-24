@@ -17,7 +17,7 @@ Hay algo que ese cálculo no alcanza a explicar.
 
 Piensa en un regalo navideño, las famosos intercambios. ¿Qué es lo que lo vuelve valioso? No es el precio, eso lo podría igualar cualquier otra cosa que cueste lo mismo. Lo que lo vuelve valioso es lo que significa: que alguien pensó en ti específicamente, tradujo lo que sabe de ti en un objeto. A veces pensamos las cosas como intercambios cuando se trata de tributos, gestos. No siempre hay que buscar igualar, subsanar la equivalencia. 
 
-Un intercambio busca equivalencia: doy esto, espero algo comparable, y si no llega, siento que perdí. El tributo no busca equivalencia. No se mide contra lo que se recibe a cambio, sino contra qué tan bien logró decir lo que quería decir. Hay tributos vacíos, como el que llega con el ticket de devolución, o por que gastó $180 en vez de $200.
+Un intercambio busca equivalencia: doy esto, espero algo comparable, y si no llega, siento que perdí. El tributo no busca equivalencia. No se mide contra lo que se recibe a cambio, sino contra qué tan bien logró decir lo que quería decir. Hay tributos vacíos, como el que llega con el ticket de devolución, o por que gastó 180 en vez de 200 pesos.
 
 ---
 
