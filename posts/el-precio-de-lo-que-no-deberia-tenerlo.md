@@ -31,6 +31,7 @@ La pregunta no sea si calculamos, creo que siempre lo hemos hecho. Pero ¿qué p
 
 Lo que nos hace humanos no siempre es medible en dinero. Y cada vez que anteponemos el cálculo, cada vez que intentamos matematizar lo que por naturaleza se resiste a una cuenta clara, algo de ser humano deja de serlo.
 
+<img src="/firma-footer.png" alt="Firma de Pedro" class="post-firma" />
 Pedro A. Ortiz
 
 *Agosto 2026*
