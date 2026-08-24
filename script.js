@@ -2,6 +2,14 @@
 // slug = lo que aparece en la URL: pedroaortiz.com/slug
 const POSTS = [
         {
+    slug: "el-precio-de-lo-que-no-deberia-tenerlo",
+    file: "posts/el-precio-de-lo-que-no-deberia-tenerlo.md",
+    title: "El precio de lo que no debería tenerlo",
+    date: "Agosto 2026", readTime: "5 min", category: "Blog",
+    section: "blog",
+    excerpt: "¿Cuánto vale lo que no vale?"
+  },
+        {
     slug: "mi-existencia-no-esta-atada-a-un-verbo",
     file: "posts/mi-existencia-no-esta-atada-a-un-verbo.md",
     title: "Mi existencia no está atada a un verbo",
