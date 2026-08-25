@@ -60,6 +60,15 @@ nav {
 
 .logo:hover { opacity: 0.75; }
 
+.logo-mark {
+  height: 20px;
+  width: auto;
+  opacity: 0.95;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.logo-mark:hover { opacity: 1; transform: scale(1.08); }
+
 .logo-firma {
   height: 22px;
   width: auto;
@@ -500,6 +509,7 @@ nav {
   .post-back { padding: 1.25rem 1.25rem 0; }
   .post-firma { height: 44px; }
   .logo-firma { height: 18px; }
+  .logo-mark { height: 16px; }
 }
 
 /* ══════════════════════════════════════════════════════════════
