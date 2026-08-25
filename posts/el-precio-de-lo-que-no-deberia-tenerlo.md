@@ -27,7 +27,7 @@ Las otras preguntas no es que dejen de existir completamente, todos nos lo pregu
 
 ---
 
-La pregunta no sea si calculamos, creo que siempre lo hemos hecho. Pero ¿qué perdemos cuando el cálculo se convierte en el único lenguaje disponible? Cuando todo tiene que pasar primero por la pregunta de cuánto vale, antes de que le demos oportunidad a la otra pregunta: qué significa.
+La pregunta no es si calculamos, creo que siempre lo hemos hecho. Pero ¿qué perdemos cuando el cálculo se convierte en el único lenguaje disponible? Cuando todo tiene que pasar primero por la pregunta de cuánto vale, antes de que le demos oportunidad a la otra pregunta: qué significa.
 
 Lo que nos hace humanos no siempre es medible en dinero. Y cada vez que anteponemos el cálculo, cada vez que intentamos matematizar lo que por naturaleza se resiste a una cuenta clara, algo de ser humano deja de serlo.
 
