@@ -5,7 +5,7 @@
   "num_posiciones": 17,
   "groups": [
     {
-      "section": "Tech & AI — Core",
+      "section": "Tech",
       "positions": [
         {
           "ticker": "META", "name": "Meta Platforms", "color": "indigo",
@@ -51,7 +51,7 @@
       ]
     },
     {
-      "section": "LatAm Fintech",
+      "section": "LatAm",
       "positions": [
         {
           "ticker": "MELI", "name": "MercadoLibre", "color": "olive",
@@ -68,7 +68,7 @@
       ]
     },
     {
-      "section": "Salud & Valor",
+      "section": "Salud",
       "positions": [
         {
           "ticker": "NVO", "name": "Novo Nordisk", "color": "gold",
@@ -79,7 +79,7 @@
       ]
     },
     {
-      "section": "Pagos Globales — Defensivo",
+      "section": "Pagos Globales",
       "positions": [
         {
           "ticker": "V", "name": "Visa", "color": "indigo",
@@ -96,7 +96,7 @@
       ]
     },
     {
-      "section": "China — Especulativo Controlado",
+      "section": "China",
       "positions": [
         {
           "ticker": "BABA", "name": "Alibaba", "color": "red",
@@ -113,7 +113,7 @@
       ]
     },
     {
-      "section": "México — Ancla Diversificadora",
+      "section": "México",
       "positions": [
         {
           "ticker": "GBMALFA", "name": "GBM Alfa — Fondo MX", "color": "green",
