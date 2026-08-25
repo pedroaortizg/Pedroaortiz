@@ -273,33 +273,20 @@ function renderSection(section) {
     return;
   }
 
-  if (section === "articulos" || section === "finanzas") {
-    container.innerHTML = `
-      <div class="section-title" style="margin-top:2rem">${section === "articulos" ? "Recientes" : "Notas de inversión"}</div>
-      <div class="section-sub">${posts.length} publicación${posts.length !== 1 ? "es" : ""}</div>
-      <div class="card-grid">
-        ${posts.map(p => `
-          <div class="card" onclick="openPost('${p.slug}')">
-            <div class="card-tag">${p.category}</div>
-            <h3>${p.title}</h3>
-            <p>${p.excerpt}</p>
-            <div class="card-date">${p.date} · ${p.readTime} lectura</div>
-          </div>`).join("")}
-      </div>`;
-  }
-
-  if (section === "blog") {
-    container.innerHTML = `
-      <div class="section-title">Entradas</div>
-      <div class="section-sub">${posts.length} publicación${posts.length !== 1 ? "es" : ""}</div>
-      <div class="blog-list">
-        ${posts.map(p => `
-          <div class="blog-item" onclick="openPost('${p.slug}')">
-            <div><h4>${p.title}</h4><span>${p.date} · ${p.readTime} lectura</span></div>
-            <div class="blog-arrow">→</div>
-          </div>`).join("")}
-      </div>`;
-  }
+  // Artículos, Finanzas y Blog comparten el mismo diseño de tarjetas
+  const titles = { articulos: "Recientes", finanzas: "Notas de inversión", blog: "Entradas" };
+  container.innerHTML = `
+    <div class="section-title" style="margin-top:2rem">${titles[section] || ""}</div>
+    <div class="section-sub">${posts.length} publicación${posts.length !== 1 ? "es" : ""}</div>
+    <div class="card-grid">
+      ${posts.map(p => `
+        <div class="card" onclick="openPost('${p.slug}')">
+          <div class="card-tag">${p.category}</div>
+          <h3>${p.title}</h3>
+          <p>${p.excerpt}</p>
+          <div class="card-date">${p.date} · ${p.readTime} lectura</div>
+        </div>`).join("")}
+    </div>`;
 }
 
 // ── Abrir post ───────────────────────────────────────────────────
