@@ -1,6 +1,6 @@
 # Sobre la abundancIA
 
-*Agosto 2026 · 8 min lectura · Blog*
+*Septiembre 2026 · 8 min lectura · Blog*
 
 ---
 
