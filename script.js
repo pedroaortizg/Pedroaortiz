@@ -1,6 +1,13 @@
 // ── Índice de posts ──────────────────────────────────────────────
 // slug = lo que aparece en la URL: pedroaortiz.com/slug
-const POSTS = [
+const POSTS = [        {
+    slug: "Sobre-la-abundancIA",
+    file: "posts/Sobre la abundancIA.md",
+    title: "Sobre la abundancIA",
+    date: "Septiembre 2026", readTime: "8 min", category: "Economia",
+    section: "articulos",
+    excerpt: "La disrupción económica que se avecina"
+  },
         {
     slug: "el-precio-de-lo-que-no-deberia-tenerlo",
     file: "posts/el-precio-de-lo-que-no-deberia-tenerlo.md",
