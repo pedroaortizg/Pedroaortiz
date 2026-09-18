@@ -33,6 +33,8 @@ En un mundo donde la abundancia es tal que nuestras necesidades básicas estén 
 
 ¡¡!!
 
+<img src="/firma-footer.png" alt="Firma de Pedro" class="post-firma" />
+
 Pedro A. Ortiz
 
 *Agosto 2026*
