@@ -4,7 +4,7 @@
 
 ---
 
-Tendemos a sobreestimar una tecnología en el corto plazo, y a subestimar lo que termina logrando en el largo. Al principio la euforia de la innovación imaginamos escenarios utópicos donde todo lo resuelve una herramienta disruptiva, sin embargo, la fricción es enorme dentro de la productividad que esto puede representar: hay que reorganizar procesos enteros, reentrenar a la gente, reescribir reglas, así que el efecto tarda en aparecer donde se supone que debería verse. Pero cuando por fin aparece, casi siempre es más grande de lo que cualquiera se atrevió a prometer al inicio, porque ya no es solo la tecnología en sí, es todo lo que se reconstruyó alrededor. Si la IA sigue ese patrón, no estamos ante una promesa equivocada de productividad, sino una promesa mal calendarizada.
+Tendemos a sobreestimar una tecnología en el corto plazo, y a subestimar lo que termina logrando en el largo. Al principio la euforia de la innovación imaginamos escenarios utópicos donde todo lo resuelve una herramienta disruptiva, sin embargo, la fricción es enorme dentro de la productividad que esto puede representar: hay que reorganizar procesos enteros, reentrenar a la gente, reescribir reglas, así que el efecto tarda en aparecer donde se supone que debería verse. Pero cuando por fin aparece, casi siempre es más grande de lo que cualquiera se atrevió a prometer al inicio, porque ya no es solo la tecnología en sí, es todo lo que se reconstruyó alrededor. Si la IA sigue ese patrón, no estamos ante una promesa equivocada de productividad, sino una promesa ***mal calendarizada.***
 
 ---
 
@@ -40,4 +40,4 @@ En un mundo donde la abundancia es tal que nuestras necesidades básicas estén 
 
 Pedro A. Ortiz
 
-*Agosto 2026*
+*Septiembre 2026*
