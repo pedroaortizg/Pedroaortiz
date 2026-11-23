@@ -45,4 +45,6 @@ Un cuerpo que deja de sentir hambre no olvida cómo comer, pero sí puede olvida
 
 Pedro A. Ortiz
 
+<img src="/firma-footer.png" alt="Firma de Pedro" class="post-firma" />
+
 *Noviembre 2026*
