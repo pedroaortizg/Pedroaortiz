@@ -1,6 +1,13 @@
 // ── Índice de posts ──────────────────────────────────────────────
 // slug = lo que aparece en la URL: pedroaortiz.com/slug
-const POSTS = [        {
+const POSTS = [   {
+  slug: "el-monstruo-de-gila",
+  file: "posts/el-monstruo-de-gila.md",
+  title: "El monstruo de Gila",
+  date: "Noviembre 2026", readTime: "6 min", category: "Blog",
+  section: "articulos",
+  excerpt: "Sobre el hambre"
+},     {
     slug: "Sobre-la-abundancIA",
     file: "posts/Sobre la abundancIA.md",
     title: "Sobre la abundancIA",
