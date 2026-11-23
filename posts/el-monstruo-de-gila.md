@@ -13,7 +13,7 @@ La diferencia de nuestra hormona contra la del monstruo de Gila es el tiempo que
 
 De ahí nacieron los medicamentos GLP-1, la semaglutida y tirzepatida. Primero para la diabetes, después para bajar de peso. Lo que hacen es literalmente lo descrito: enviarle al cerebro la señal de saciedad, apagan el interruptor del hambre. Y después de unos trucos de laboratorio, la hormona es capaz de durar una semana en la sangre.
 
-Hoy Novo Nordisk y Eli Lilly se disputan un mercado que se proyecta en más de cien mil millones de dólares antes de que termine la década. Los fármacos ya no usan la molécula del lagarto tal cual, son versiones modificadas de nuestra propia hormona, pero la idea de fondo salió del animal. Es decir, tomamos prestada la biología de una especie para que nuestro cuerpo.
+Hoy Novo Nordisk y Eli Lilly se disputan un mercado que se proyecta en más de cien mil millones de dólares antes de que termine la década. Los fármacos ya no usan la molécula del lagarto tal cual, son versiones modificadas de nuestra propia hormona, pero la idea de fondo salió del animal. Es decir, tomamos prestada la biología de una especie para que nuestro cuerpo no batalle.
 
 ---
 
@@ -28,7 +28,7 @@ Sin embargo ahora piensa en lo que está pasando con la inteligencia artificial.
 ## ...
 
 La hormona no te impide comer, te quita la señal del hambre. El hambre es lo que te empuja a buscar la comida. Es incómodo a veces, al igual que no saber.
-Esa incomodidad es la que te hace leer otra vez, comparar, dudar, equivocarte y corregir. Y con el hambre es lo que hace apreciar unas quesadillas con chocomilk.
+Esa incomodidad es la que te hace leer otra vez, comparar, dudar, equivocarte y corregir. Y con el hambre es lo que hace apreciar unas **quesadillas con chocomilk.**
 
 Un cuerpo que deja de sentir hambre no olvida cómo comer, pero sí puede olvidar cuándo lo necesita. Una mente que deja de sentir la incomodidad de no saber quizá no olvide cómo razonar, pero sí puede olvidar para qué sirve hacerlo.
 
@@ -39,7 +39,7 @@ Un cuerpo que deja de sentir hambre no olvida cómo comer, pero sí puede olvida
 ¿Será la inteligencia artificial una herramienta más, que sigue necesitando a alguien que piense para usarla, o la primera capaz de sustituir a quien la usa, sino en el juicio detrás de la misma? Es este un preámbulo del corto circuito de nuestro interruptor de pensamiento y consciencia humana?
 
 
-**¿Seguiremos teniendo hambre de pensar cuando ya nunca tengamos que pasar hambre de respuestas?**
+**¿Seguiremos reconociendo el hambre de pensar cuando ya nunca tengamos que pasar hambre de respuestas?**
 
 ---
 
